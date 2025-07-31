@@ -32,10 +32,10 @@
     <!-- Center: Navigation Menu -->
     <nav class="menu">
       <a href="#about"><i class="fas fa-user"></i> About</a>
-      <a href="#experience-timeline"><i class="devicon-codeigniter-plain"></i> Experience</a>
+      <a href="#certificates"><i class="devicon-centos-plain"></i> Certifications</a>
       <a href="#projects"><i class="devicon-cloudflareworkers-plain"></i> Projects</a>
       <a href="#skills"><i class="devicon-knexjs-original"></i> Skills</a>
-      <a href="#certificates"><i class="devicon-centos-plain"></i> Certifications</a>
+      <a href="#experience-timeline"><i class="devicon-codeigniter-plain"></i> Experience</a>
       <a href="#publications"><i class="devicon-packer-plain"></i> Publications</a>
       <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
     </nav>
@@ -95,23 +95,905 @@
 
 
 
-
-
-      <section id="experience-timeline">
-
-        
-        <div class="experience-header">
-          <p class="intro">Hello,</p>
-          <h1 class="name-heading">I’m Mano Harsha Sappa.</h1>
-              <!-- Gradient Underline -->
-      <div class="section-underline"></div>
-          <p class="intro-subtext">
-            I’m a Data Analytics graduate student with hands-on experience in tech support, data science, and web development.
-            I focus on building smart systems, extracting insights, and ensuring technical readiness in real-world settings.
+      <section id="certificates" class="section">
+        <div class="container" data-aos="zoom-in-up">
+          <div class="contact-tag">Certifications</div>
+      
+          <!-- Main Title -->
+          <h1 class="section-heading">Professional Certifications</h1>
+          <div class="section-underline"></div>
+    
+          <!-- Featured Certificate: AWS Cloud Foundations -->
+    <div class="featured-cert-wrapper">
+        <div class="cert-text">
+          <h2>AWS Academy Cloud Foundations</h2>
+          <p>
+            This certification covers the fundamental concepts of cloud computing, AWS core services, security, architecture, pricing, and support. It establishes a strong foundation for cloud-related career paths.
           </p>
+          <p>
+            <strong>Issued by:</strong> Amazon Web Services &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+            <strong>Date:</strong> March 2024
+          </p>
+          
+          
         </div>
+        <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-image">
+          <img src="Certificates/aws-academy-graduate-aws-academy-cloud-foundations.png" alt="AWS Cloud Foundations Badge" />
+        </a>
+      </div>
+      
+      
+      
+          <!-- Total Certificate Count -->
+          <p class="section-subtext">
+            Total Certifications: 8
+          </p>
+      
+          <!-- Scrollable Wrapper + Arrows -->
+          <div class="cert-carousel-wrapper">
+            
+      
+            <div class="certification-scroll" id="cert-track">
+              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
+                <img src="Certificates/AES ACADEMY CLOUD.png" alt="AWS Cloud">
+                <h3>AWS Academy Cloud Foundations</h3>
+                <p>AWS · Mar 2024</p>
+              </a>
+      
+              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
+                <img src="Certificates/Tata Groups.png" alt="Tata Group">
+                <h3>Tata Group – Data Visualisation</h3>
+                <p>Forage · Mar 2025</p>
+              </a>
+      
+              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
+                <img src="Certificates/DevOps Foundation.png" alt="DevOps">
+                <h3>DevOps Foundations: Microservices</h3>
+                <p>CompTIA · Feb 2025</p>
+              </a>
+      
+              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
+                <img src="Certificates/Python Certificare.png" alt="Python Certificate">
+                <h3>Python (Basic)</h3>
+                <p>HackerRank · Apr 2025</p>
+              </a>
+      
+              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
+                <img src="Certificates/Generative Ai .png" alt="Generative AI">
+                <h3>Generative AI – A Way of Life</h3>
+                <p>Analytics Vidhya · Mar 2025</p>
+              </a>
+      
+              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
+                <img src="Certificates/Intro to Career Skills in data .png" alt="Career Skills Analytics">
+                <h3>Intro to Career Skills in Data Analytics</h3>
+                <p>LinkedIn Learning · Feb 2025</p>
+              </a>
+      
+              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
+                <img src="Certificates/Business analysis.png" alt="Business Analysis">
+                <h3>Business Analysis Foundations</h3>
+                <p>LinkedIn Learning · Feb 2025</p>
+              </a>
+      
+              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
+                <img src="Certificates/Excel VBA.png" alt="Excel VBA">
+                <h3>Excel VBA: Managing Files and Data</h3>
+                <p>LinkedIn Learning · Mar 2025</p>
+              </a>
+            </div>
+      
+           
+          </div>
+          <div class="cert-nav-buttons">
+            <button class="arrow-btn" id="cert-prev">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+            <button class="arrow-btn" id="cert-next">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          
+        </div>
+      </section>
+      
+      <script>
+        const track = document.getElementById('cert-track');
+        const prevBtn = document.getElementById('cert-prev');
+        const nextBtn = document.getElementById('cert-next');
+        const certTotal = document.getElementById('cert-total');
+      
+        prevBtn.addEventListener('click', () => {
+          track.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+      
+        nextBtn.addEventListener('click', () => {
+          track.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+      
+        certTotal.textContent = track.querySelectorAll('.cert-card').length;
+      </script>
+      
       
 
+
+              
+      <section id="projects" class="section" >
+        <div class="container" data-aos="zoom-in-up">
+            <!-- Section Badge -->
+            <div class="contact-tag">My Work</div>
+        
+            <!-- Main Title -->
+            <h1 class="section-heading">Featured Projects</h1>
+        
+            <!-- Gradient Underline -->
+            <div class="section-underline"></div>
+            
+            <p class="section-subtext">
+              Total Project: 12
+            </p>
+        
+            <!-- Description Paragraph -->
+            <p class="section-subtext">
+                A curated collection of certifications demonstrating my proficiency in data analytics, machine learning, and modern technologies used across real-world projects.
+            </p>
+        
+      
+          <div class="project-grid">
+
+
+
+            <!-- Project 0: Portfolio Website -->
+            <div class="project-card">
+              <div class="project-preview">
+                <img src="images/project 0.png" alt="Portfolio Website">
+                <div class="project-lock">
+                    <a href="https://github.com/ManoHarshaSappa/Azure_Databricks_iot_predictive_pipeline/tree/main" target="_blank" title="View GitHub Repository">
+                      <i class="devicon-github-original"></i>
+                    </a>
+                  </div>
+                  
+
+              </div>
+      
+              <div class="project-content">
+                <h3 class="project-title">Azure-Based Predictive Analytics & IoT Stream Processing</h3>
+                <p class="project-description">
+                  Built a Spark-based analytics pipeline for workforce and retail predictions, and deployed real-time IoT telemetry processing using Azure Databricks, IoT Hub, and Stream Analytics.
+                </p>
+      
+                <!-- Tech Stack -->
+                <div class="project-skills">
+                  <span class="skill-badge"><i class="devicon-azure-plain colored"></i> Azure Databricks</span>
+                  <span class="skill-badge"><i class="devicon-python-plain colored"></i> PySpark MLlib</span>
+                  <span class="skill-badge"><i class="fas fa-broadcast-tower" style="color: #ff5733;"></i> Azure IoT Hub</span>
+                  <span class="skill-badge"><i class="fas fa-database" style="color: #ffa500;"></i> Spark SQL</span>
+                  <span class="skill-badge"><i class="fas fa-stream" style="color: #00c49a;"></i> Azure Stream Analytics</span>
+                  <span class="skill-badge"><i class="fas fa-server" style="color: #0078d7;"></i> Azure Virtual Machines</span>
+                 
+                </div>
+                
+                <hr class="divider" />
+      
+                <div class="project-footer">
+                  <a href="https://github.com/ManoHarshaSappa/Azure_Databricks_iot_predictive_pipeline/tree/main" target="_blank" class="project-visit-link">Explore the hub... →</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Project 1: Portfolio Website -->
+            <div class="project-card">
+              <div class="project-preview">
+                <img src="images/1 Project.png" alt="Portfolio Website">
+                <div class="project-lock">
+                    <a href="https://github.com/ManoHarshaSappa/Chatbot_for_Infotunnel" target="_blank" title="View GitHub Repository">
+                      <i class="devicon-github-original"></i>
+                    </a>
+                  </div>
+                  
+
+              </div>
+      
+              <div class="project-content">
+                <h3 class="project-title">DARIA-3o: AI-Powered QA Chatbot for Tunnel NDE Insights</h3>
+                <p class="project-description">
+                  Built a domain-specific QA chatbot for tunnel NDE using LLMs, FAISS, and Whisper. Enabled accurate voice/text query responses across 26+ inspection techniques.
+
+                </p>
+      
+                <!-- Tech Stack -->
+                <div class="project-skills">
+                <span class="skill-badge"><i class="devicon-android-plain colored"></i>OpenAI API</span>
+                <span class="skill-badge"><i class="fas fa-cubes" style="color: #a259ff;"></i> LangChain</span>
+                <span class="skill-badge"><i class="devicon-python-plain colored"></i> Hugging Face Transformers</span>
+                <span class="skill-badge"><i class="fas fa-brain" style="color: #ffb400;"></i> RAG</span>
+
+
+                  </div>
+                  
+              
+                  
+      
+              
+      
+                <hr class="divider" />
+      
+                <div class="project-footer">
+                  <a href="https://github.com/ManoHarshaSappa/Chatbot_for_Infotunnel" target="_blank" class="project-visit-link">Explore the hub... →</a>
+                </div>
+              </div>
+            </div>
+      
+
+             <!-- Project 2: SupplySight – AI-Based Warehouse Product Prediction -->
+            <div class="project-card">
+              <div class="project-preview">
+                <img src="images/2 project supply_chain_project .jpg" alt="SupplySight – AI-Based Warehouse Product Prediction">
+                <div class="project-lock">
+                  <a href="https://github.com/ManoHarshaSappa/supply-chain-product-prediction" target="_blank" title="View GitHub Repository">
+                    <i class="devicon-github-original"></i>
+                  </a>
+                </div>
+              </div>
+            
+              <div class="project-content">
+                <h3 class="project-title">SupplySight – AI-Based Warehouse Product Prediction</h3>
+                <p class="project-description">
+                  Built a Linear Regression model with MCP (Model Context Protocol) to forecast product weight output per warehouse using staffing, location, and infrastructure features.
+                </p>
+            
+                <!-- Tech Stack -->
+                <div class="project-skills">
+                  <span class="skill-badge"><i class="devicon-python-plain colored "></i></i> Python </span>
+                  
+                  <span class="skill-badge"><i class="fas fa-project-diagram" style="color: #00bcd4;"></i> MCP / UV</span>
+                  <span class="skill-badge"><i class="devicon-pandas-plain colored"style="color: #a259ff;"></i> Pandas</span>
+                  <span class="skill-badge">
+                    <i class="devicon-scikitlearn-plain colored"></i> Scikit-learn
+                  </span>
+                  
+                  <span class="skill-badge"><i class="fas fa-chart-line" style="color: #4caf50;"></i> Regression Analysis</span>
+                </div>
+            
+              
+            
+                <hr class="divider" />
+            
+                <div class="project-footer">
+                  <a href="https://github.com/ManoHarshaSappa/supply-chain-product-prediction" target="_blank" class="project-visit-link">Check it out on GitHub →</a>
+                </div>
+              </div>
+            </div>
+            
+
+
+            <!-- Project 2: Repo Inspector -->
+            <div class="project-card hidden-projects">
+              <div class="project-preview">
+                <img src="images/2 Project.png" alt="Coastal Bridge Risk Analysis">
+                <div class="project-lock">
+                    <a href="https://github.com/ManoHarshaSappa/coastal_versus_inland_environmental_impacts_on_lifespan_and_maintenance" target="_blank" title="View GitHub Repository">
+                      <i class="devicon-github-original"></i>
+                    </a>
+                  </div>
+              </div>
+      
+              <div class="project-content">
+                <h3 class="project-title">Bridges at Risk: Predicting Impact on Lifespann</h3>
+                <p class="project-description">
+                  Used ML on 34K+ Virginia bridges to cluster risk levels and predict deterioration. XGBoost reached 77.7% accuracy using weather and traffic data.
+                </p>
+      
+                <!-- Tech Stack -->
+                <div class="project-skills">
+                    <span class="skill-badge"><i class="fas fa-map-marked-alt" style="color: #00bcd4;"></i> Geospatial Analysis</span>
+                    <span class="skill-badge"><i class="devicon-apachespark-plain colored"></i> PySpark</span>
+
+                    <span class="skill-badge"><i class="fas fa-tools" style="color: #ffc107;"></i> Feature Engineering</span>
+   
+                    <span class="skill-badge"><i class="fab fa-docker" style="color: #f5720e;"></i> Databricks</span>
+                    
+                   
+                  </div>
+                  
+      
+                
+      
+                <hr class="divider" />
+      
+                <div class="project-footer">
+                  <a href="https://github.com/ManoHarshaSappa/coastal_versus_inland_environmental_impacts_on_lifespan_and_maintenance" class="project-visit-link">Check it out... →</a>
+                </div>
+              </div>
+            </div>
+
+
+<!-- Project: 3  YouTube Performance Prediction -->
+<div class="project-card hidden-projects">
+<div class="project-preview">
+<img src="images/33 project.png" alt="YouTube Performance Prediction Project">
+<div class="project-lock">
+  <a href="https://github.com/ManoHarshaSappa/youtube-performance-prediction-semiannual-2017" target="_blank" title="View GitHub Repository">
+    <i class="devicon-github-original"></i>
+  </a>
+</div>
+</div>
+
+<div class="project-content">
+<h3 class="project-title">YouTube Performance Prediction</h3>
+<p class="project-description">
+  Built machine learning models to forecast video engagement metrics using real-world data of 16K+ trending videos.
+</p>
+
+<!-- Tech Stack -->
+<div class="project-skills">
+  <span class="skill-badge"><i class="devicon-python-plain colored"></i> Python</span>
+  <span class="skill-badge"><i class="devicon-pandas-plain colored"></i> Pandas</span>
+  <span class="skill-badge"><i class="devicon-numpy-plain colored"></i> NumPy</span>
+  <span class="skill-badge"><i class="fas fa-brain" style="color: #f39c12;"></i> Machine Learning</span>
+  <span class="skill-badge"><i class="fas fa-sliders-h" style="color: #9b59b6;"></i> Model Tuning</span>
+
+</div>
+
+
+
+<hr class="divider" />
+
+<div class="project-footer">
+  <a href="https://github.com/ManoHarshaSappa/youtube-performance-prediction-semiannual-2017" class="project-visit-link" target="_blank">
+    View GitHub Repository →
+  </a>
+</div>
+</div>
+</div>
+
+
+<!-- Project 4: Enhancing Resource Management in NYC -->
+
+<div class="project-card hidden-projects">
+<div class="project-preview">
+<img src="images/NYC_management.png" alt="Enhancing Recycling Management NYC">
+<div class="project-lock">
+  <a href="https://github.com/ManoHarshaSappa/NYC-Recycling-Efficiency-Analysis" target="_blank" title="View GitHub Repository">
+    <i class="devicon-github-original"></i>
+  </a>
+</div>
+</div>
+
+<div class="project-content">
+<h3 class="project-title">Enhancing Resource Management in NYC</h3>
+<p class="project-description">
+  Analyzed NYC recycling efficiency using Python, R, SQL, and ML to model performance, identify trends, and suggest data-driven sustainability improvements.
+
+
+</p>
+
+<!-- Tech Stack -->
+<div class="project-skills">
+  <span class="skill-badge"><i class="devicon-python-plain colored"></i> Python</span>
+  <span class="skill-badge"><i class="devicon-r-plain colored"></i> R</span>
+  <span class="skill-badge"><i class="fas fa-search" style="color: #795548;"></i> Model Tuning</span>
+  <span class="skill-badge"><i class="fas fa-database" style="color: #007acc;"></i> SQL</span>
+  <span class="skill-badge"><i class="fab fa-aws" style="color: #ff9900;"></i> AWS EC2</span>
+  <span class="skill-badge"><i class="fab fa-aws" style="color: #569a31;"></i> AWS S3</span>
+  <span class="skill-badge"><i class="fas fa-robot" style="color: #9c27b0;"></i> Machine Learning</span>
+
+  
+</div>
+
+
+
+<hr class="divider" />
+
+<div class="project-footer">
+  <a href="https://github.com/ManoHarshaSappa/NYC-Recycling-Efficiency-Analysis" class="project-visit-link" target="_blank">
+    Checkout the code source of this website. →
+  </a>
+</div>
+</div>
+</div>
+
+
+
+
+<!-- Project 5: Traffic Collision Analysis in Montgomery County -->
+             
+<div class="project-card hidden-projects">
+<div class="project-preview">
+  <img src="images/3 Project.png" alt="Montgomery County Traffic Collision Analysis">
+  <div class="project-lock">
+    <a href="https://github.com/ManoHarshaSappa/Traffic-Collision-Analysis-in-Montgomery-County" target="_blank" title="View GitHub Repository">
+      <i class="devicon-github-original"></i>
+    </a>
+  </div>
+</div>
+
+<div class="project-content">
+  <h3 class="project-title" >Traffic Collision Analysis</h3>
+  <p class="project-description">
+    Exploring trends, insights, and predictions to enhance road safety through data-driven analysis.
+  </p>
+
+  <!-- Tech Stack -->
+  <div class="project-skills">
+    <span class="skill-badge"><i class="devicon-r-plain colored"></i> R</span>
+    <span class="skill-badge"><i class="fas fa-table" style="color: #00bfa5;"></i> Descriptive Statistics</span>
+    <span class="skill-badge"><i class="fas fa-search" style="color: #795548;"></i> Model Tuning</span>
+    <span class="skill-badge"><i class="fas fa-vial" style="color: #e91e63;"></i> Hypothesis Testing</span>
+
+    <span class="skill-badge"><i class="fas fa-chart-bar" style="color: #03a9f4;"></i> Data Visualization</span>
+ 
+
+  </div>
+  
+  
+
+  
+
+  <hr class="divider" />
+
+  <div class="project-footer">
+    <a href="https://manoharshasappa.github.io/Traffic-Collision-Analysis-in-Montgomery-County/fp.html" class="project-visit-link" target="_blank">
+        Checkout the code source of this website. →
+    </a>
+  </div>
+</div>
+</div>
+
+
+
+<!-- ✅ Button stays outside the flex grid -->
+<!-- Project 6: EV Adoption Analysis -->
+<div class="project-card hidden-projects">
+<div class="project-preview">
+<img src="images/projrct 8.png" alt="Electrifying the Road: EV Adoption Analysis">
+<div class="project-lock">
+  <a href="https://github.com/ManoHarshaSappa/ev-adoption-analysis" target="_blank" title="View GitHub Repository">
+    <i class="devicon-github-original"></i>
+  </a>
+</div>
+</div>
+
+<div class="project-content">
+<h3 class="project-title">EV Adoption Analysis</h3>
+<p class="project-description">
+  Used regression, clustering, and PCA to uncover key drivers of electric vehicle adoption across U.S. regions and evaluate policy impacts using 126K+ real-world records.
+</p>
+
+<!-- Tech Stack -->
+<div class="project-skills">
+  <span class="skill-badge"><i class="devicon-python-plain colored"></i> Python</span>
+  <span class="skill-badge"><i class="fas fa-cogs" style="color: #03a9f4;"></i> Random Forest</span>
+  <span class="skill-badge"><i class="fas fa-chart-line" style="color: #ff9800;"></i> EDA</span>
+  <span class="skill-badge"><i class="fas fa-project-diagram" style="color: #9c27b0;"></i> Clustering (KMeans)</span>
+
+</div>
+
+
+<hr class="divider" />
+
+<div class="project-footer">
+  <a href="https://github.com/ManoHarshaSappa/ev-adoption-analysis" class="project-visit-link" target="_blank">
+    Explore the hub... →
+  </a>
+</div>
+</div>
+</div>
+
+
+<!-- Project 7: Redesigning Graphs for Enhanced Clarity and Insight -->
+<div class="project-card hidden-projects">
+<div class="project-preview">
+  <img src="images/4 Project.png" alt="Bad Graph Redesign and Visualization Enhancement">
+  <div class="project-lock">
+    <a href="https://github.com/ManoHarshaSappa/Redesigning-Graphs-for-Enhanced-Clarity-and-Insight" target="_blank" title="View GitHub Repository">
+      <i class="devicon-github-original"></i>
+    </a>
+  </div>
+</div>
+
+<div class="project-content">
+  <h3 class="project-title">Transforming Misleading Graphs into Insightful Visuals</h3>
+  <p class="project-description">
+    Elevating misleading charts into powerful, intuitive visuals to reveal deeper insights and drive better decisions.
+  </p>
+
+  <!-- Tech Stack -->
+  <div class="project-skills">
+    <span class="skill-badge"><i class="fas fa-chart-line" style="color: #f44336;"></i> matplotlib</span>
+    <span class="skill-badge"><i class="fas fa-chart-pie" style="color: #8e44ad;"></i> Statistical Analysis</span>
+    <span class="skill-badge"><i class="fas fa-lightbulb" style="color: #ffca28;"></i> Design Thinking</span>  
+    <span class="skill-badge"><i class="fas fa-water" style="color: #03a9f4;"></i> seaborn</span>
+    
+
+  </div>
+  
+  
+
+  
+
+  <hr class="divider" />
+
+  <div class="project-footer">
+
+    <a href="https://manoharshasappa.github.io/Redesigning-Graphs-for-Enhanced-Clarity-and-Insight/Bad-Graph.html" class="project-visit-link" target="_blank">
+        Checkout the code source of this website. →
+    </a>
+  </div>
+</div>
+</div>
+
+<!-- Project 8: Smart Library Management System -->
+<div class="project-card hidden-projects">
+<div class="project-preview">
+  <img src="images/5 Project.png" alt="Smart Library Management System">
+  <div class="project-lock">
+    <a href="https://github.com/ManoHarshaSappa/Library_Management_System" target="_blank" title="View GitHub Repository">
+      <i class="devicon-github-original"></i>
+    </a>
+  </div>
+</div>
+
+<div class="project-content">
+  <h3 class="project-title">Library Data Management & Analytics System</h3>
+  <p class="project-description">
+    Streamlining resource tracking and optimizing operations through a robust relational database and analytical queries.
+  </p>
+
+  <!-- Tech Stack -->
+  <div class="project-skills">
+    <span class="skill-badge"><i class="devicon-azuresqldatabase-plain colored"></i> SQL</span>
+    <span class="skill-badge"><i class="fas fa-code-branch" style="color: #fbc02d;"></i> Joins & Aggregations</span>
+    <span class="skill-badge"><i class="fas fa-stream" style="color: #ff7043;"></i> Database Normalization</span>
+
+   
+  </div>
+  
+  
+
+  
+
+  <hr class="divider" />
+
+  <div class="project-footer">
+    <a href="https://github.com/ManoHarshaSappa/Library_Management_System" class="project-visit-link" target="_blank">
+      View Source Cod... →
+    </a>
+  </div>
+</div>
+</div>
+
+
+<!-- Project 9: Optimized Recycling Management for NYC -->
+<div class="project-card hidden-projects">
+<div class="project-preview">
+  <img src="images/6 Project.png" alt="Optimized Recycling Management for NYC">
+  <div class="project-lock">
+    <a href="https://github.com/ManoHarshaSappa/Enhancing_Resource_Management" target="_blank" title="View GitHub Repository">
+      <i class="devicon-github-original"></i>
+    </a>
+  </div>
+</div>
+
+<div class="project-content">
+  <h3 class="project-title">Optimizing Recycling Efficiency in New York City Districts</h3>
+  <p class="project-description">
+    Analyzing NYC’s waste data to uncover trends, enhance recycling efforts, and support sustainable urban planning.
+  </p>
+
+  <!-- Tech Stack -->
+  <div class="project-skills">
+    <span class="skill-badge"><i class="devicon-azuresqldatabase-plain colored"></i> SQL</span>
+    <span class="skill-badge"><i class="fas fa-broom" style="color: #4caf50;"></i> Data Cleaning</span>
+    <span class="skill-badge"><i class="fas fa-chart-line" style="color: #ff9800;"></i> Trend Analysis</span>
+    
+    <span class="skill-badge"><i class="fas fa-project-diagram" style="color: #9c27b0;"></i> Correlation Analysis</span>
+  </div>
+  
+  
+
+  
+  <hr class="divider" />
+
+  <div class="project-footer">
+    <a href="https://github.com/ManoHarshaSappa/Enhancing_Resource_Management" class="project-visit-link" target="_blank">
+      Explore the hub... →
+    </a>
+  </div>
+</div>
+</div>
+
+
+
+
+
+<!-- Project 10: Handwritten-Digit-Recognition -->
+<div class="project-card hidden-projects">
+<div class="project-preview">
+  <img src="images/9- project.png" alt="Handwritten Digit Recognition using CNN">
+  <div class="project-lock">
+    <a href="https://github.com/ManoHarshaSappa/Handwritten-Digit-Recognition-CNN" target="_blank" title="View GitHub Repository">
+      <i class="devicon-github-original"></i>
+    </a>
+  </div>
+</div>
+
+<div class="project-content">
+  <h3 class="project-title">Handwritten Digit Recognition using CNN</h3>
+  <p class="project-description">
+    A deep learning model using Convolutional Neural Networks (CNN) to accurately classify handwritten digits from the MNIST dataset with over 99% accuracy.
+  </p>
+
+  <!-- Tech Stack -->
+  <div class="project-skills">
+    <span class="skill-badge"><i class="fas fa-brain" style="color: #f44336;"></i> TensorFlow</span>
+    <span class="skill-badge"><i class="fas fa-cogs" style="color: #8e44ad;"></i> Keras</span>
+    <span class="skill-badge"><i class="fas fa-chart-line" style="color: #ffca28;"></i> CNN</span>
+    <span class="skill-badge"><i class="fas fa-chart-bar" style="color: #03a9f4;"></i> MNIST</span>
+  </div>
+
+  
+
+  <hr class="divider" />
+
+  <div class="project-footer">
+    <a href="https://github.com/ManoHarshaSappa/Handwritten-Digit-Recognition-CNN" class="project-visit-link" target="_blank">
+      Try the live demo or explore the notebook →
+    </a>
+  </div>
+</div>
+</div>
+
+
+
+
+
+</div> <!-- /.project-grid -->
+<div class="show-more-container">
+<button id="toggleProjects" onclick="toggleHiddenProjects()">Show More ↓</button>
+</div>
+</div> <!-- /.container -->
+</section>
+      
+
+
+
+<script>
+function toggleHiddenProjects() {
+  const hiddenProjects = document.querySelectorAll('.hidden-projects');
+  const toggleBtn = document.getElementById('toggleProjects');
+
+  const isHidden = Array.from(hiddenProjects).some(el => el.style.display === '' || el.style.display === 'none');
+
+  hiddenProjects.forEach(el => {
+    el.style.display = isHidden ? 'flex' : 'none';
+
+  });
+
+  toggleBtn.textContent = isHidden ? 'Show Less ↑' : 'Show More ↓';
+}
+</script>
+
+
+    
+
+
+
+<section id="skills" class="section" >
+  <div class="container" data-aos="zoom-in-up">
+
+      <div class="contact-tag">My Expertise</div>
+
+      <!-- Main Title -->
+      <h1 class="section-heading">Skills & Services</h1>
+  
+      <div class="section-underline"></div>
+        <p class="intro-subtext">
+          I offer a range of services to help businesses build and optimize their digital presence.
+        </p>
+      </div>
+      
+
+    <div class="skills-grid">
+
+<!-- Data Quality Engineer Services -->
+<div class="skill-card">
+<div class="service-icon-heading">
+  <div class="icon-wrapper">
+    <i class="fas fa-check-circle"></i>
+  </div>
+</div>
+<h3>Data Quality Engineering – Core Tools</h3>
+<p>Focused on delivering reliable, validated data pipelines using Azure and big data technologies.</p>
+
+<!-- Divider -->
+<hr style="border: 0.5px solid #2d2d2d; margin: 20px 0;">
+
+<ul>
+  <div class="project-skills">
+    <span class="skill-badge"><i class="devicon-azure-plain colored"></i> Azure Data Factory</span>
+    <span class="skill-badge"><i class="devicon-azure-plain colored"></i> Event Hub</span>
+    <span class="skill-badge"><i class="devicon-azure-plain colored"></i> Data Lake</span><span class="skill-badge">
+      <i class="devicon-apachespark-plain-wordmark colored"></i>
+     Databricks (PySpark)</span>
+    <span class="skill-badge"><i class="devicon-azure-plain colored"></i> Azure Synapse Analytics</span>
+    
+    
+    
+    <span class="skill-badge"><i class="fas fa-broom" style="color: #f39c12;"></i> Data Profiling & Cleaning</span>
+    <span class="skill-badge"><i class="devicon-mysql-plain colored"></i> SQL</span>
+  </div>
+</ul>
+</div>
+
+
+
+
+
+      <!-- Data Analyst & BI Services -->
+      <div class="skill-card">
+        <div class="service-icon-heading">
+          <div class="icon-wrapper">
+            <i class="fas fa-chart-line"></i>
+          </div>
+        </div>
+        <h3>Data Analyst & BI Services</h3>
+        <p>Turning raw data into clear, actionable insights with analytics and interactive dashboards.</p>
+      
+        <!-- Divider -->
+        <hr style="border: 0.5px solid #2d2d2d; margin: 20px 0;">
+      
+        <ul>
+          <div class="project-skills">
+            <span class="skill-badge"><i class="devicon-python-plain colored"></i> Python</span>
+            <span class="skill-badge"><i class="devicon-minitab-plain colored"></i> Tableau</span>
+            <span class="skill-badge"><i class="devicon-rabbitmq-original"></i> Power BI</span>
+            <span class="skill-badge"><i class="devicon-mysql-plain colored"></i> SQL</span>
+            <span class="skill-badge"><i class="devicon-pypi-plain colored"></i> Excel</span>
+            <span class="skill-badge"><i class="fas fa-binoculars" style="color: #00bcd4;"></i> Exploratory Data Analysis</span>
+            <span class="skill-badge"><i class="fas fa-chart-pie" style="color: #ff6f61;"></i> Data Visualization</span>
+            
+           
+          </div>
+        </ul>
+      </div>
+      
+
+      <!-- Machine Learning Engineering – Skill Card -->
+      <div class="skill-card">
+        <div class="service-icon-heading">
+          <div class="icon-wrapper">
+            <i class="fas fa-robot"></i>
+          </div>
+        </div>
+        <h3>Machine Learning Engineering</h3>
+        <p>Building, tuning, and evaluating predictive models to solve real-world problems using structured data.</p>
+      
+        <!-- Divider -->
+        <hr style="border: 0.5px solid #2d2d2d; margin: 20px 0;">
+      
+        <ul>
+          <div class="project-skills">
+            <span class="skill-badge"><i class="devicon-python-plain colored"></i> Python</span>
+            <span class="skill-badge"><i class="fas fa-vial" style="color: #ff9800;"></i> Feature Engineering</span>
+            <span class="skill-badge"><i class="devicon-scikitlearn-plain colored"></i> scikit-learn</span>
+              
+            <span class="skill-badge"><i class="fas fa-chart-line" style="color: #00c853;"></i> Model Evaluation</span>
+            <span class="skill-badge"><i class="devicon-numpy-plain colored"></i> NumPy</span>
+            <span class="skill-badge"><i class="fas fa-sliders-h" style="color: #9b59b6;"></i> Model Tuning</span>
+     
+          </div>
+        </ul>
+      </div>
+      
+
+      <!-- AI & NLP Development – Skill Card -->
+      <div class="skill-card">
+        <div class="service-icon-heading">
+          <div class="icon-wrapper">
+            <i class="fas fa-brain"></i>
+          </div>
+        </div>
+        
+        <h3>AI & NLP Development</h3>
+        <p>Creating intelligent systems using natural language processing and large language models.</p>
+      
+        <!-- Divider -->
+        <hr style="border: 0.5px solid #2d2d2d; margin: 20px 0;">
+      
+        <ul>
+          <div class="project-skills">
+            <span class="skill-badge"><i class="fas fa-code-branch" style="color: #ff6d00;"></i> Hugging Face</span>
+    <span class="skill-badge"><i class="fas fa-robot" style="color: #ffffff;"></i> OpenAI API</span>
+    <span class="skill-badge"><i class="fas fa-stream" style="color: #03a9f4;"></i> LangChain</span>
+    <span class="skill-badge"><i class="fas fa-magic" style="color: #e91e63;"></i> Prompt Engineering</span>
+    <span class="skill-badge"><i class="devicon-tensorflow-original colored"></i> BERT</span>
+    <span class="skill-badge"><i class="fas fa-layer-group" style="color: #00bcd4;"></i> Transformers</span>
+    <span class="skill-badge"><i class="fas fa-retweet" style="color: #607d8b;"></i> RAG</span>
+    
+            
+          </div>
+        </ul>
+      </div>
+      
+
+      <!-- Database Management – Skill Card -->
+      <div class="skill-card">
+        <div class="service-icon-heading">
+          <div class="icon-wrapper">
+            <i class="fas fa-database"></i>
+          </div>
+        </div>
+        <h3>Database Management</h3>
+        <p>Designing, optimizing, and managing structured databases for scalable data operations.</p>
+      
+        <!-- Divider -->
+        <hr style="border: 0.5px solid #2d2d2d; margin: 20px 0;">
+      
+        <ul>
+          <div class="project-skills">
+            <span class="skill-badge"><i class="devicon-mysql-plain colored" style="color: #ffc107;"></i> MySQL</span>
+            <span class="skill-badge"><i class="fas fa-random" style="color: #4caf50;"></i> Joins & Aggregations</span>
+            <span class="skill-badge"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+            <span class="skill-badge"><i class="devicon-microsoftsqlserver-plain colored"></i> MS SQL Server</span>
+            <span class="skill-badge"><i class="fas fa-project-diagram" style="color: #ffc107;"></i> ER Modeling</span>
+            
+            <span class="skill-badge"><i class="fas fa-network-wired" style="color: #9c27b0;"></i> Data Normalization</span>
+          </div>
+        </ul>
+      </div>
+      
+
+      
+    </div>
+      
+
+    <!-- Additional Skills -->
+    <div class="additional-skills">
+      <h4 style="margin-bottom: 12px;">Additional Skills</h4>
+    
+      <div class="tags">
+        <!-- ✅ Generative AI & LLM Tools -->
+        <span class="skill-tag"><i class="fas fa-robot" style="color: #ffffff;"></i> OpenAI API</span>
+        <span class="skill-tag"><i class="fas fa-brain" style="color: #9c27b0;"></i> ChatGPT</span>
+
+        <span class="skill-tag"><i class="fas fa-layer-group" style="color: #00bcd4;"></i> Transformers</span>
+        <span class="skill-tag"><i class="fas fa-magic" style="color: #e91e63;"></i> LangChain</span>
+        <span class="skill-tag"><i class="fas fa-retweet" style="color: #4caf50;"></i> RAG Pipelines</span>
+  
+        <span class="skill-tag"><i class="fas fa-cloud" style="color: #2196f3;"></i> Vertex AI</span>
+    
+        <!-- ✅ Dev & Notebook Tools -->
+        <span class="skill-tag"><i class="devicon-jupyter-plain colored"></i> Jupyter</span>
+        <span class="skill-tag"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+        <span class="skill-tag"><i class="fas fa-globe" style="color: #00c853;"></i> Google Colab</span>
+
+    
+        <!-- ✅ Visualization & UI Tools -->
+        <span class="skill-tag"><i class="fab fa-adobe" style="color: #ff61f6;"></i> Adobe XD</span>
+        <span class="skill-tag"><i class="fas fa-chart-pie" style="color: #fbbc05;"></i> Power BI</span>
+        <span class="skill-tag"><i class="devicon-minitab-plain colored"></i> Tableau</span>
+      </div>
+    </div>
+    
+
+  </div>
+</section>
+
+<section id="experience-timeline" class="section" >
+  <div class="container" data-aos="zoom-in-up">
+
+      <div class="contact-tag">My Experience</div>
+
+      <!-- Main Title -->
+      <h1 class="section-heading">Professional ath</h1>
+  
+      <div class="section-underline"></div>
+        <p class="intro-subtext">
+          I’m a Data Analytics graduate student with hands-on experience in tech support, data science, and web development.
+          I focus on building smart systems, extracting insights, and ensuring technical readiness in real-world settings.
+        </p>
+      </div>
 
 
         <div class="experience-grid">
@@ -320,892 +1202,8 @@
 
 
 
-              
-        <section id="projects" class="section" >
-            <div class="container" data-aos="zoom-in-up">
-                <!-- Section Badge -->
-                <div class="contact-tag">My Work</div>
-            
-                <!-- Main Title -->
-                <h1 class="section-heading">Featured Projects</h1>
-            
-                <!-- Gradient Underline -->
-                <div class="section-underline"></div>
-                
-                <p class="section-subtext">
-                  Total Project: 12
-                </p>
-            
-                <!-- Description Paragraph -->
-                <p class="section-subtext">
-                    A curated collection of certifications demonstrating my proficiency in data analytics, machine learning, and modern technologies used across real-world projects.
-                </p>
-            
-          
-              <div class="project-grid">
-
-
-
-                <!-- Project 0: Portfolio Website -->
-                <div class="project-card">
-                  <div class="project-preview">
-                    <img src="images/project 0.png" alt="Portfolio Website">
-                    <div class="project-lock">
-                        <a href="https://github.com/ManoHarshaSappa/Azure_Databricks_iot_predictive_pipeline/tree/main" target="_blank" title="View GitHub Repository">
-                          <i class="devicon-github-original"></i>
-                        </a>
-                      </div>
-                      
-
-                  </div>
-          
-                  <div class="project-content">
-                    <h3 class="project-title">Azure-Based Predictive Analytics & IoT Stream Processing</h3>
-                    <p class="project-description">
-                      Built a Spark-based analytics pipeline for workforce and retail predictions, and deployed real-time IoT telemetry processing using Azure Databricks, IoT Hub, and Stream Analytics.
-                    </p>
-          
-                    <!-- Tech Stack -->
-                    <div class="project-skills">
-                      <span class="skill-badge"><i class="devicon-azure-plain colored"></i> Azure Databricks</span>
-                      <span class="skill-badge"><i class="devicon-python-plain colored"></i> PySpark MLlib</span>
-                      <span class="skill-badge"><i class="fas fa-broadcast-tower" style="color: #ff5733;"></i> Azure IoT Hub</span>
-                      <span class="skill-badge"><i class="fas fa-database" style="color: #ffa500;"></i> Spark SQL</span>
-                      <span class="skill-badge"><i class="fas fa-stream" style="color: #00c49a;"></i> Azure Stream Analytics</span>
-                      <span class="skill-badge"><i class="fas fa-server" style="color: #0078d7;"></i> Azure Virtual Machines</span>
-                     
-                    </div>
-                    
-                    <hr class="divider" />
-          
-                    <div class="project-footer">
-                      <a href="https://github.com/ManoHarshaSappa/Azure_Databricks_iot_predictive_pipeline/tree/main" target="_blank" class="project-visit-link">Explore the hub... →</a>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Project 1: Portfolio Website -->
-                <div class="project-card">
-                  <div class="project-preview">
-                    <img src="images/1 Project.png" alt="Portfolio Website">
-                    <div class="project-lock">
-                        <a href="https://github.com/ManoHarshaSappa/Chatbot_for_Infotunnel" target="_blank" title="View GitHub Repository">
-                          <i class="devicon-github-original"></i>
-                        </a>
-                      </div>
-                      
-
-                  </div>
-          
-                  <div class="project-content">
-                    <h3 class="project-title">DARIA-3o: AI-Powered QA Chatbot for Tunnel NDE Insights</h3>
-                    <p class="project-description">
-                      Built a domain-specific QA chatbot for tunnel NDE using LLMs, FAISS, and Whisper. Enabled accurate voice/text query responses across 26+ inspection techniques.
-
-                    </p>
-          
-                    <!-- Tech Stack -->
-                    <div class="project-skills">
-                    <span class="skill-badge"><i class="devicon-android-plain colored"></i>OpenAI API</span>
-                    <span class="skill-badge"><i class="fas fa-cubes" style="color: #a259ff;"></i> LangChain</span>
-                    <span class="skill-badge"><i class="devicon-python-plain colored"></i> Hugging Face Transformers</span>
-                    <span class="skill-badge"><i class="fas fa-brain" style="color: #ffb400;"></i> RAG</span>
-  
-  
-                      </div>
-                      
-                  
-                      
-          
-                  
-          
-                    <hr class="divider" />
-          
-                    <div class="project-footer">
-                      <a href="https://github.com/ManoHarshaSappa/Chatbot_for_Infotunnel" target="_blank" class="project-visit-link">Explore the hub... →</a>
-                    </div>
-                  </div>
-                </div>
-          
-
-                 <!-- Project 2: SupplySight – AI-Based Warehouse Product Prediction -->
-                <div class="project-card">
-                  <div class="project-preview">
-                    <img src="images/2 project supply_chain_project .jpg" alt="SupplySight – AI-Based Warehouse Product Prediction">
-                    <div class="project-lock">
-                      <a href="https://github.com/ManoHarshaSappa/supply-chain-product-prediction" target="_blank" title="View GitHub Repository">
-                        <i class="devicon-github-original"></i>
-                      </a>
-                    </div>
-                  </div>
-                
-                  <div class="project-content">
-                    <h3 class="project-title">SupplySight – AI-Based Warehouse Product Prediction</h3>
-                    <p class="project-description">
-                      Built a Linear Regression model with MCP (Model Context Protocol) to forecast product weight output per warehouse using staffing, location, and infrastructure features.
-                    </p>
-                
-                    <!-- Tech Stack -->
-                    <div class="project-skills">
-                      <span class="skill-badge"><i class="devicon-python-plain colored "></i></i> Python </span>
-                      
-                      <span class="skill-badge"><i class="fas fa-project-diagram" style="color: #00bcd4;"></i> MCP / UV</span>
-                      <span class="skill-badge"><i class="devicon-pandas-plain colored"style="color: #a259ff;"></i> Pandas</span>
-                      <span class="skill-badge">
-                        <i class="devicon-scikitlearn-plain colored"></i> Scikit-learn
-                      </span>
-                      
-                      <span class="skill-badge"><i class="fas fa-chart-line" style="color: #4caf50;"></i> Regression Analysis</span>
-                    </div>
-                
-                  
-                
-                    <hr class="divider" />
-                
-                    <div class="project-footer">
-                      <a href="https://github.com/ManoHarshaSappa/supply-chain-product-prediction" target="_blank" class="project-visit-link">Check it out on GitHub →</a>
-                    </div>
-                  </div>
-                </div>
-                
-
-
-                <!-- Project 2: Repo Inspector -->
-                <div class="project-card hidden-projects">
-                  <div class="project-preview">
-                    <img src="images/2 Project.png" alt="Coastal Bridge Risk Analysis">
-                    <div class="project-lock">
-                        <a href="https://github.com/ManoHarshaSappa/coastal_versus_inland_environmental_impacts_on_lifespan_and_maintenance" target="_blank" title="View GitHub Repository">
-                          <i class="devicon-github-original"></i>
-                        </a>
-                      </div>
-                  </div>
-          
-                  <div class="project-content">
-                    <h3 class="project-title">Bridges at Risk: Predicting Impact on Lifespann</h3>
-                    <p class="project-description">
-                      Used ML on 34K+ Virginia bridges to cluster risk levels and predict deterioration. XGBoost reached 77.7% accuracy using weather and traffic data.
-                    </p>
-          
-                    <!-- Tech Stack -->
-                    <div class="project-skills">
-                        <span class="skill-badge"><i class="fas fa-map-marked-alt" style="color: #00bcd4;"></i> Geospatial Analysis</span>
-                        <span class="skill-badge"><i class="devicon-apachespark-plain colored"></i> PySpark</span>
-
-                        <span class="skill-badge"><i class="fas fa-tools" style="color: #ffc107;"></i> Feature Engineering</span>
-       
-                        <span class="skill-badge"><i class="fab fa-docker" style="color: #f5720e;"></i> Databricks</span>
-                        
-                       
-                      </div>
-                      
-          
-                    
-          
-                    <hr class="divider" />
-          
-                    <div class="project-footer">
-                      <a href="https://github.com/ManoHarshaSappa/coastal_versus_inland_environmental_impacts_on_lifespan_and_maintenance" class="project-visit-link">Check it out... →</a>
-                    </div>
-                  </div>
-                </div>
-
-
-<!-- Project: 3  YouTube Performance Prediction -->
-<div class="project-card hidden-projects">
-  <div class="project-preview">
-    <img src="images/33 project.png" alt="YouTube Performance Prediction Project">
-    <div class="project-lock">
-      <a href="https://github.com/ManoHarshaSappa/youtube-performance-prediction-semiannual-2017" target="_blank" title="View GitHub Repository">
-        <i class="devicon-github-original"></i>
-      </a>
-    </div>
-  </div>
-
-  <div class="project-content">
-    <h3 class="project-title">YouTube Performance Prediction</h3>
-    <p class="project-description">
-      Built machine learning models to forecast video engagement metrics using real-world data of 16K+ trending videos.
-    </p>
-
-    <!-- Tech Stack -->
-    <div class="project-skills">
-      <span class="skill-badge"><i class="devicon-python-plain colored"></i> Python</span>
-      <span class="skill-badge"><i class="devicon-pandas-plain colored"></i> Pandas</span>
-      <span class="skill-badge"><i class="devicon-numpy-plain colored"></i> NumPy</span>
-      <span class="skill-badge"><i class="fas fa-brain" style="color: #f39c12;"></i> Machine Learning</span>
-      <span class="skill-badge"><i class="fas fa-sliders-h" style="color: #9b59b6;"></i> Model Tuning</span>
-    
-    </div>
-
-   
-
-    <hr class="divider" />
-
-    <div class="project-footer">
-      <a href="https://github.com/ManoHarshaSappa/youtube-performance-prediction-semiannual-2017" class="project-visit-link" target="_blank">
-        View GitHub Repository →
-      </a>
-    </div>
-  </div>
-</div>
-
-
-<!-- Project 4: Enhancing Resource Management in NYC -->
-
-<div class="project-card hidden-projects">
-  <div class="project-preview">
-    <img src="images/NYC_management.png" alt="Enhancing Recycling Management NYC">
-    <div class="project-lock">
-      <a href="https://github.com/ManoHarshaSappa/NYC-Recycling-Efficiency-Analysis" target="_blank" title="View GitHub Repository">
-        <i class="devicon-github-original"></i>
-      </a>
-    </div>
-  </div>
-
-  <div class="project-content">
-    <h3 class="project-title">Enhancing Resource Management in NYC</h3>
-    <p class="project-description">
-      Analyzed NYC recycling efficiency using Python, R, SQL, and ML to model performance, identify trends, and suggest data-driven sustainability improvements.
-
-
-    </p>
-
-    <!-- Tech Stack -->
-    <div class="project-skills">
-      <span class="skill-badge"><i class="devicon-python-plain colored"></i> Python</span>
-      <span class="skill-badge"><i class="devicon-r-plain colored"></i> R</span>
-      <span class="skill-badge"><i class="fas fa-search" style="color: #795548;"></i> Model Tuning</span>
-      <span class="skill-badge"><i class="fas fa-database" style="color: #007acc;"></i> SQL</span>
-      <span class="skill-badge"><i class="fab fa-aws" style="color: #ff9900;"></i> AWS EC2</span>
-      <span class="skill-badge"><i class="fab fa-aws" style="color: #569a31;"></i> AWS S3</span>
-      <span class="skill-badge"><i class="fas fa-robot" style="color: #9c27b0;"></i> Machine Learning</span>
-
-      
-    </div>
-
-    
-
-    <hr class="divider" />
-
-    <div class="project-footer">
-      <a href="https://github.com/ManoHarshaSappa/NYC-Recycling-Efficiency-Analysis" class="project-visit-link" target="_blank">
-        Checkout the code source of this website. →
-      </a>
-    </div>
-  </div>
-</div>
-
-
-
-
-<!-- Project 5: Traffic Collision Analysis in Montgomery County -->
-                 
-<div class="project-card hidden-projects">
-    <div class="project-preview">
-      <img src="images/3 Project.png" alt="Montgomery County Traffic Collision Analysis">
-      <div class="project-lock">
-        <a href="https://github.com/ManoHarshaSappa/Traffic-Collision-Analysis-in-Montgomery-County" target="_blank" title="View GitHub Repository">
-          <i class="devicon-github-original"></i>
-        </a>
-      </div>
-    </div>
-  
-    <div class="project-content">
-      <h3 class="project-title" >Traffic Collision Analysis</h3>
-      <p class="project-description">
-        Exploring trends, insights, and predictions to enhance road safety through data-driven analysis.
-      </p>
-  
-      <!-- Tech Stack -->
-      <div class="project-skills">
-        <span class="skill-badge"><i class="devicon-r-plain colored"></i> R</span>
-        <span class="skill-badge"><i class="fas fa-table" style="color: #00bfa5;"></i> Descriptive Statistics</span>
-        <span class="skill-badge"><i class="fas fa-search" style="color: #795548;"></i> Model Tuning</span>
-        <span class="skill-badge"><i class="fas fa-vial" style="color: #e91e63;"></i> Hypothesis Testing</span>
-
-        <span class="skill-badge"><i class="fas fa-chart-bar" style="color: #03a9f4;"></i> Data Visualization</span>
-     
-
-      </div>
-      
-      
-  
-      
-  
-      <hr class="divider" />
-  
-      <div class="project-footer">
-        <a href="https://manoharshasappa.github.io/Traffic-Collision-Analysis-in-Montgomery-County/fp.html" class="project-visit-link" target="_blank">
-            Checkout the code source of this website. →
-        </a>
-      </div>
-    </div>
-  </div>
-  
-
- 
- <!-- ✅ Button stays outside the flex grid -->
-<!-- Project 6: EV Adoption Analysis -->
- <div class="project-card hidden-projects">
-  <div class="project-preview">
-    <img src="images/projrct 8.png" alt="Electrifying the Road: EV Adoption Analysis">
-    <div class="project-lock">
-      <a href="https://github.com/ManoHarshaSappa/ev-adoption-analysis" target="_blank" title="View GitHub Repository">
-        <i class="devicon-github-original"></i>
-      </a>
-    </div>
-  </div>
-
-  <div class="project-content">
-    <h3 class="project-title">EV Adoption Analysis</h3>
-    <p class="project-description">
-      Used regression, clustering, and PCA to uncover key drivers of electric vehicle adoption across U.S. regions and evaluate policy impacts using 126K+ real-world records.
-    </p>
-
-    <!-- Tech Stack -->
-    <div class="project-skills">
-      <span class="skill-badge"><i class="devicon-python-plain colored"></i> Python</span>
-      <span class="skill-badge"><i class="fas fa-cogs" style="color: #03a9f4;"></i> Random Forest</span>
-      <span class="skill-badge"><i class="fas fa-chart-line" style="color: #ff9800;"></i> EDA</span>
-      <span class="skill-badge"><i class="fas fa-project-diagram" style="color: #9c27b0;"></i> Clustering (KMeans)</span>
-    
-    </div>
-
-    
-    <hr class="divider" />
-
-    <div class="project-footer">
-      <a href="https://github.com/ManoHarshaSappa/ev-adoption-analysis" class="project-visit-link" target="_blank">
-        Explore the hub... →
-      </a>
-    </div>
-  </div>
-</div>
-
-
-  <!-- Project 7: Redesigning Graphs for Enhanced Clarity and Insight -->
-<div class="project-card hidden-projects">
-    <div class="project-preview">
-      <img src="images/4 Project.png" alt="Bad Graph Redesign and Visualization Enhancement">
-      <div class="project-lock">
-        <a href="https://github.com/ManoHarshaSappa/Redesigning-Graphs-for-Enhanced-Clarity-and-Insight" target="_blank" title="View GitHub Repository">
-          <i class="devicon-github-original"></i>
-        </a>
-      </div>
-    </div>
-  
-    <div class="project-content">
-      <h3 class="project-title">Transforming Misleading Graphs into Insightful Visuals</h3>
-      <p class="project-description">
-        Elevating misleading charts into powerful, intuitive visuals to reveal deeper insights and drive better decisions.
-      </p>
-  
-      <!-- Tech Stack -->
-      <div class="project-skills">
-        <span class="skill-badge"><i class="fas fa-chart-line" style="color: #f44336;"></i> matplotlib</span>
-        <span class="skill-badge"><i class="fas fa-chart-pie" style="color: #8e44ad;"></i> Statistical Analysis</span>
-        <span class="skill-badge"><i class="fas fa-lightbulb" style="color: #ffca28;"></i> Design Thinking</span>  
-        <span class="skill-badge"><i class="fas fa-water" style="color: #03a9f4;"></i> seaborn</span>
-        
-  
-      </div>
-      
-      
-  
-      
-  
-      <hr class="divider" />
-  
-      <div class="project-footer">
-
-        <a href="https://manoharshasappa.github.io/Redesigning-Graphs-for-Enhanced-Clarity-and-Insight/Bad-Graph.html" class="project-visit-link" target="_blank">
-            Checkout the code source of this website. →
-        </a>
-      </div>
-    </div>
-  </div>
-  
-<!-- Project 8: Smart Library Management System -->
-<div class="project-card hidden-projects">
-    <div class="project-preview">
-      <img src="images/5 Project.png" alt="Smart Library Management System">
-      <div class="project-lock">
-        <a href="https://github.com/ManoHarshaSappa/Library_Management_System" target="_blank" title="View GitHub Repository">
-          <i class="devicon-github-original"></i>
-        </a>
-      </div>
-    </div>
-  
-    <div class="project-content">
-      <h3 class="project-title">Library Data Management & Analytics System</h3>
-      <p class="project-description">
-        Streamlining resource tracking and optimizing operations through a robust relational database and analytical queries.
-      </p>
-  
-      <!-- Tech Stack -->
-      <div class="project-skills">
-        <span class="skill-badge"><i class="devicon-azuresqldatabase-plain colored"></i> SQL</span>
-        <span class="skill-badge"><i class="fas fa-code-branch" style="color: #fbc02d;"></i> Joins & Aggregations</span>
-        <span class="skill-badge"><i class="fas fa-stream" style="color: #ff7043;"></i> Database Normalization</span>
-  
-       
-      </div>
-      
-      
-  
-      
-  
-      <hr class="divider" />
-  
-      <div class="project-footer">
-        <a href="https://github.com/ManoHarshaSappa/Library_Management_System" class="project-visit-link" target="_blank">
-          View Source Cod... →
-        </a>
-      </div>
-    </div>
-  </div>
-  
-
-  <!-- Project 9: Optimized Recycling Management for NYC -->
-<div class="project-card hidden-projects">
-    <div class="project-preview">
-      <img src="images/6 Project.png" alt="Optimized Recycling Management for NYC">
-      <div class="project-lock">
-        <a href="https://github.com/ManoHarshaSappa/Enhancing_Resource_Management" target="_blank" title="View GitHub Repository">
-          <i class="devicon-github-original"></i>
-        </a>
-      </div>
-    </div>
-  
-    <div class="project-content">
-      <h3 class="project-title">Optimizing Recycling Efficiency in New York City Districts</h3>
-      <p class="project-description">
-        Analyzing NYC’s waste data to uncover trends, enhance recycling efforts, and support sustainable urban planning.
-      </p>
-  
-      <!-- Tech Stack -->
-      <div class="project-skills">
-        <span class="skill-badge"><i class="devicon-azuresqldatabase-plain colored"></i> SQL</span>
-        <span class="skill-badge"><i class="fas fa-broom" style="color: #4caf50;"></i> Data Cleaning</span>
-        <span class="skill-badge"><i class="fas fa-chart-line" style="color: #ff9800;"></i> Trend Analysis</span>
-        
-        <span class="skill-badge"><i class="fas fa-project-diagram" style="color: #9c27b0;"></i> Correlation Analysis</span>
-      </div>
-      
-      
-  
-      
-      <hr class="divider" />
   
-      <div class="project-footer">
-        <a href="https://github.com/ManoHarshaSappa/Enhancing_Resource_Management" class="project-visit-link" target="_blank">
-          Explore the hub... →
-        </a>
-      </div>
-    </div>
-  </div>
- 
 
-  
-
-
-  <!-- Project 10: Handwritten-Digit-Recognition -->
-  <div class="project-card hidden-projects">
-    <div class="project-preview">
-      <img src="images/9- project.png" alt="Handwritten Digit Recognition using CNN">
-      <div class="project-lock">
-        <a href="https://github.com/ManoHarshaSappa/Handwritten-Digit-Recognition-CNN" target="_blank" title="View GitHub Repository">
-          <i class="devicon-github-original"></i>
-        </a>
-      </div>
-    </div>
-  
-    <div class="project-content">
-      <h3 class="project-title">Handwritten Digit Recognition using CNN</h3>
-      <p class="project-description">
-        A deep learning model using Convolutional Neural Networks (CNN) to accurately classify handwritten digits from the MNIST dataset with over 99% accuracy.
-      </p>
-  
-      <!-- Tech Stack -->
-      <div class="project-skills">
-        <span class="skill-badge"><i class="fas fa-brain" style="color: #f44336;"></i> TensorFlow</span>
-        <span class="skill-badge"><i class="fas fa-cogs" style="color: #8e44ad;"></i> Keras</span>
-        <span class="skill-badge"><i class="fas fa-chart-line" style="color: #ffca28;"></i> CNN</span>
-        <span class="skill-badge"><i class="fas fa-chart-bar" style="color: #03a9f4;"></i> MNIST</span>
-      </div>
-  
-      
-  
-      <hr class="divider" />
-  
-      <div class="project-footer">
-        <a href="https://github.com/ManoHarshaSappa/Handwritten-Digit-Recognition-CNN" class="project-visit-link" target="_blank">
-          Try the live demo or explore the notebook →
-        </a>
-      </div>
-    </div>
-  </div>
-  
-
-
-   
-
-  </div> <!-- /.project-grid -->
-  <div class="show-more-container">
-    <button id="toggleProjects" onclick="toggleHiddenProjects()">Show More ↓</button>
-  </div>
- </div> <!-- /.container -->
-</section>
-          
-
-
-
-<script>
-    function toggleHiddenProjects() {
-      const hiddenProjects = document.querySelectorAll('.hidden-projects');
-      const toggleBtn = document.getElementById('toggleProjects');
-  
-      const isHidden = Array.from(hiddenProjects).some(el => el.style.display === '' || el.style.display === 'none');
-  
-      hiddenProjects.forEach(el => {
-        el.style.display = isHidden ? 'flex' : 'none';
-
-      });
-  
-      toggleBtn.textContent = isHidden ? 'Show Less ↑' : 'Show More ↓';
-    }
-  </script>
-  
-
-
-
-  <section id="skills" class="section" >
-    <div class="container" data-aos="zoom-in-up">
-
-        <div class="contact-tag">My Expertise</div>
-  
-        <!-- Main Title -->
-        <h1 class="section-heading">Skills & Services</h1>
-    
-        <div class="section-underline"></div>
-          <p class="intro-subtext">
-            I offer a range of services to help businesses build and optimize their digital presence.
-          </p>
-        </div>
-        
-  
-      <div class="skills-grid">
-
- <!-- Data Quality Engineer Services -->
- <div class="skill-card">
-  <div class="service-icon-heading">
-    <div class="icon-wrapper">
-      <i class="fas fa-check-circle"></i>
-    </div>
-  </div>
-  <h3>Data Quality Engineering – Core Tools</h3>
-  <p>Focused on delivering reliable, validated data pipelines using Azure and big data technologies.</p>
-
-  <!-- Divider -->
-  <hr style="border: 0.5px solid #2d2d2d; margin: 20px 0;">
-
-  <ul>
-    <div class="project-skills">
-      <span class="skill-badge"><i class="devicon-azure-plain colored"></i> Azure Data Factory</span>
-      <span class="skill-badge"><i class="devicon-azure-plain colored"></i> Event Hub</span>
-      <span class="skill-badge"><i class="devicon-azure-plain colored"></i> Data Lake</span><span class="skill-badge">
-        <i class="devicon-apachespark-plain-wordmark colored"></i>
-       Databricks (PySpark)</span>
-      <span class="skill-badge"><i class="devicon-azure-plain colored"></i> Azure Synapse Analytics</span>
-      
-      
-      
-      <span class="skill-badge"><i class="fas fa-broom" style="color: #f39c12;"></i> Data Profiling & Cleaning</span>
-      <span class="skill-badge"><i class="devicon-mysql-plain colored"></i> SQL</span>
-    </div>
-  </ul>
-</div>
-
-
-
-
-  
-        <!-- Data Analyst & BI Services -->
-        <div class="skill-card">
-          <div class="service-icon-heading">
-            <div class="icon-wrapper">
-              <i class="fas fa-chart-line"></i>
-            </div>
-          </div>
-          <h3>Data Analyst & BI Services</h3>
-          <p>Turning raw data into clear, actionable insights with analytics and interactive dashboards.</p>
-        
-          <!-- Divider -->
-          <hr style="border: 0.5px solid #2d2d2d; margin: 20px 0;">
-        
-          <ul>
-            <div class="project-skills">
-              <span class="skill-badge"><i class="devicon-python-plain colored"></i> Python</span>
-              <span class="skill-badge"><i class="devicon-minitab-plain colored"></i> Tableau</span>
-              <span class="skill-badge"><i class="devicon-rabbitmq-original"></i> Power BI</span>
-              <span class="skill-badge"><i class="devicon-mysql-plain colored"></i> SQL</span>
-              <span class="skill-badge"><i class="devicon-pypi-plain colored"></i> Excel</span>
-              <span class="skill-badge"><i class="fas fa-binoculars" style="color: #00bcd4;"></i> Exploratory Data Analysis</span>
-              <span class="skill-badge"><i class="fas fa-chart-pie" style="color: #ff6f61;"></i> Data Visualization</span>
-              
-             
-            </div>
-          </ul>
-        </div>
-        
-  
-        <!-- Machine Learning Engineering – Skill Card -->
-        <div class="skill-card">
-          <div class="service-icon-heading">
-            <div class="icon-wrapper">
-              <i class="fas fa-robot"></i>
-            </div>
-          </div>
-          <h3>Machine Learning Engineering</h3>
-          <p>Building, tuning, and evaluating predictive models to solve real-world problems using structured data.</p>
-        
-          <!-- Divider -->
-          <hr style="border: 0.5px solid #2d2d2d; margin: 20px 0;">
-        
-          <ul>
-            <div class="project-skills">
-              <span class="skill-badge"><i class="devicon-python-plain colored"></i> Python</span>
-              <span class="skill-badge"><i class="fas fa-vial" style="color: #ff9800;"></i> Feature Engineering</span>
-              <span class="skill-badge"><i class="devicon-scikitlearn-plain colored"></i> scikit-learn</span>
-                
-              <span class="skill-badge"><i class="fas fa-chart-line" style="color: #00c853;"></i> Model Evaluation</span>
-              <span class="skill-badge"><i class="devicon-numpy-plain colored"></i> NumPy</span>
-              <span class="skill-badge"><i class="fas fa-sliders-h" style="color: #9b59b6;"></i> Model Tuning</span>
-       
-            </div>
-          </ul>
-        </div>
-        
-  
-        <!-- AI & NLP Development – Skill Card -->
-        <div class="skill-card">
-          <div class="service-icon-heading">
-            <div class="icon-wrapper">
-              <i class="fas fa-brain"></i>
-            </div>
-          </div>
-          
-          <h3>AI & NLP Development</h3>
-          <p>Creating intelligent systems using natural language processing and large language models.</p>
-        
-          <!-- Divider -->
-          <hr style="border: 0.5px solid #2d2d2d; margin: 20px 0;">
-        
-          <ul>
-            <div class="project-skills">
-              <span class="skill-badge"><i class="fas fa-code-branch" style="color: #ff6d00;"></i> Hugging Face</span>
-      <span class="skill-badge"><i class="fas fa-robot" style="color: #ffffff;"></i> OpenAI API</span>
-      <span class="skill-badge"><i class="fas fa-stream" style="color: #03a9f4;"></i> LangChain</span>
-      <span class="skill-badge"><i class="fas fa-magic" style="color: #e91e63;"></i> Prompt Engineering</span>
-      <span class="skill-badge"><i class="devicon-tensorflow-original colored"></i> BERT</span>
-      <span class="skill-badge"><i class="fas fa-layer-group" style="color: #00bcd4;"></i> Transformers</span>
-      <span class="skill-badge"><i class="fas fa-retweet" style="color: #607d8b;"></i> RAG</span>
-      
-              
-            </div>
-          </ul>
-        </div>
-        
-  
-        <!-- Database Management – Skill Card -->
-        <div class="skill-card">
-          <div class="service-icon-heading">
-            <div class="icon-wrapper">
-              <i class="fas fa-database"></i>
-            </div>
-          </div>
-          <h3>Database Management</h3>
-          <p>Designing, optimizing, and managing structured databases for scalable data operations.</p>
-        
-          <!-- Divider -->
-          <hr style="border: 0.5px solid #2d2d2d; margin: 20px 0;">
-        
-          <ul>
-            <div class="project-skills">
-              <span class="skill-badge"><i class="devicon-mysql-plain colored" style="color: #ffc107;"></i> MySQL</span>
-              <span class="skill-badge"><i class="fas fa-random" style="color: #4caf50;"></i> Joins & Aggregations</span>
-              <span class="skill-badge"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
-              <span class="skill-badge"><i class="devicon-microsoftsqlserver-plain colored"></i> MS SQL Server</span>
-              <span class="skill-badge"><i class="fas fa-project-diagram" style="color: #ffc107;"></i> ER Modeling</span>
-              
-              <span class="skill-badge"><i class="fas fa-network-wired" style="color: #9c27b0;"></i> Data Normalization</span>
-            </div>
-          </ul>
-        </div>
-        
-  
-        
-      </div>
-        
-  
-      <!-- Additional Skills -->
-      <div class="additional-skills">
-        <h4 style="margin-bottom: 12px;">Additional Skills</h4>
-      
-        <div class="tags">
-          <!-- ✅ Generative AI & LLM Tools -->
-          <span class="skill-tag"><i class="fas fa-robot" style="color: #ffffff;"></i> OpenAI API</span>
-          <span class="skill-tag"><i class="fas fa-brain" style="color: #9c27b0;"></i> ChatGPT</span>
-
-          <span class="skill-tag"><i class="fas fa-layer-group" style="color: #00bcd4;"></i> Transformers</span>
-          <span class="skill-tag"><i class="fas fa-magic" style="color: #e91e63;"></i> LangChain</span>
-          <span class="skill-tag"><i class="fas fa-retweet" style="color: #4caf50;"></i> RAG Pipelines</span>
-    
-          <span class="skill-tag"><i class="fas fa-cloud" style="color: #2196f3;"></i> Vertex AI</span>
-      
-          <!-- ✅ Dev & Notebook Tools -->
-          <span class="skill-tag"><i class="devicon-jupyter-plain colored"></i> Jupyter</span>
-          <span class="skill-tag"><i class="devicon-vscode-plain colored"></i> VS Code</span>
-          <span class="skill-tag"><i class="fas fa-globe" style="color: #00c853;"></i> Google Colab</span>
-  
-      
-          <!-- ✅ Visualization & UI Tools -->
-          <span class="skill-tag"><i class="fab fa-adobe" style="color: #ff61f6;"></i> Adobe XD</span>
-          <span class="skill-tag"><i class="fas fa-chart-pie" style="color: #fbbc05;"></i> Power BI</span>
-          <span class="skill-tag"><i class="devicon-minitab-plain colored"></i> Tableau</span>
-        </div>
-      </div>
-      
-  
-    </div>
-  </section>
-  
-
-  
-
-
-
-  <section id="certificates" class="section">
-    <div class="container" data-aos="zoom-in-up">
-      <div class="contact-tag">Certifications</div>
-  
-      <!-- Main Title -->
-      <h1 class="section-heading">Professional Certifications</h1>
-      <div class="section-underline"></div>
-
-      <!-- Featured Certificate: AWS Cloud Foundations -->
-<div class="featured-cert-wrapper">
-    <div class="cert-text">
-      <h2>AWS Academy Cloud Foundations</h2>
-      <p>
-        This certification covers the fundamental concepts of cloud computing, AWS core services, security, architecture, pricing, and support. It establishes a strong foundation for cloud-related career paths.
-      </p>
-      <p>
-        <strong>Issued by:</strong> Amazon Web Services &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-        <strong>Date:</strong> March 2024
-      </p>
-      
-      
-    </div>
-    <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-image">
-      <img src="Certificates/aws-academy-graduate-aws-academy-cloud-foundations.png" alt="AWS Cloud Foundations Badge" />
-    </a>
-  </div>
-  
-  
-  
-      <!-- Total Certificate Count -->
-      <p class="section-subtext">
-        Total Certifications: 8
-      </p>
-  
-      <!-- Scrollable Wrapper + Arrows -->
-      <div class="cert-carousel-wrapper">
-        
-  
-        <div class="certification-scroll" id="cert-track">
-          <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-            <img src="Certificates/AES ACADEMY CLOUD.png" alt="AWS Cloud">
-            <h3>AWS Academy Cloud Foundations</h3>
-            <p>AWS · Mar 2024</p>
-          </a>
-  
-          <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-            <img src="Certificates/Tata Groups.png" alt="Tata Group">
-            <h3>Tata Group – Data Visualisation</h3>
-            <p>Forage · Mar 2025</p>
-          </a>
-  
-          <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-            <img src="Certificates/DevOps Foundation.png" alt="DevOps">
-            <h3>DevOps Foundations: Microservices</h3>
-            <p>CompTIA · Feb 2025</p>
-          </a>
-  
-          <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-            <img src="Certificates/Python Certificare.png" alt="Python Certificate">
-            <h3>Python (Basic)</h3>
-            <p>HackerRank · Apr 2025</p>
-          </a>
-  
-          <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-            <img src="Certificates/Generative Ai .png" alt="Generative AI">
-            <h3>Generative AI – A Way of Life</h3>
-            <p>Analytics Vidhya · Mar 2025</p>
-          </a>
-  
-          <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-            <img src="Certificates/Intro to Career Skills in data .png" alt="Career Skills Analytics">
-            <h3>Intro to Career Skills in Data Analytics</h3>
-            <p>LinkedIn Learning · Feb 2025</p>
-          </a>
-  
-          <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-            <img src="Certificates/Business analysis.png" alt="Business Analysis">
-            <h3>Business Analysis Foundations</h3>
-            <p>LinkedIn Learning · Feb 2025</p>
-          </a>
-  
-          <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-            <img src="Certificates/Excel VBA.png" alt="Excel VBA">
-            <h3>Excel VBA: Managing Files and Data</h3>
-            <p>LinkedIn Learning · Mar 2025</p>
-          </a>
-        </div>
-  
-       
-      </div>
-      <div class="cert-nav-buttons">
-        <button class="arrow-btn" id="cert-prev">
-          <i class="fas fa-arrow-left"></i>
-        </button>
-        <button class="arrow-btn" id="cert-next">
-          <i class="fas fa-arrow-right"></i>
-        </button>
-      </div>
-      
-    </div>
-  </section>
-  
-  <script>
-    const track = document.getElementById('cert-track');
-    const prevBtn = document.getElementById('cert-prev');
-    const nextBtn = document.getElementById('cert-next');
-    const certTotal = document.getElementById('cert-total');
-  
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -300, behavior: 'smooth' });
-    });
-  
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: 300, behavior: 'smooth' });
-    });
-  
-    certTotal.textContent = track.querySelectorAll('.cert-card').length;
-  </script>
-  
-  
 
 
   <section id="publications" class="section" >
@@ -1442,6 +1440,18 @@
   });
 </script>
 
+
+<a href="resume.pdf" download class="resume-download-btn" title="Download Resume">
+  <i class="fa-solid fa-cloud-arrow-down"></i>
+</a>
+
+<script>
+  const btn = document.getElementById('resumeButton');
+  btn.addEventListener('click', function () {
+    btn.classList.add('clicked');
+    setTimeout(() => btn.classList.remove('clicked'), 1000);
+  });
+</script>
 
 
 </body>
