@@ -26,6 +26,8 @@
 </head>
 <body>
 
+
+
   <!-- Top Navigation Bar -->
   <header class="topbar">
     <!-- Left: Name / Logo -->
@@ -88,9 +90,7 @@
           </div>
       
         </div>
-        <a href="#about" class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-          </a>
+       
           
           
       </section><!-- Experience Section with Split Card Layout -->
@@ -1142,6 +1142,107 @@
     setTimeout(() => btn.classList.remove('clicked'), 1000);
   });
 </script>
+
+<script>
+  (function () {
+    function initTabs() {
+      const sections = Array.from(document.querySelectorAll('section[id]'));
+      const links = Array.from(document.querySelectorAll('a[href^="#"]'))
+        .filter(a => sections.some(s => '#' + s.id === a.getAttribute('href')));
+  
+      function updateActiveLink(id) {
+        links.forEach(a => {
+          const isActive = a.getAttribute('href') === '#' + id;
+          if (isActive) {
+            a.style.color = '#00ff99';   // ACTIVE color (green, change to what you like)
+            a.style.fontWeight = '600';
+          } else {
+            a.style.color = '#ffffff';   // INACTIVE color (white, match your theme)
+            a.style.fontWeight = '400';
+          }
+        });
+      }
+  
+      function showSection(id, pushHash = true) {
+        sections.forEach(s => {
+          s.style.display = (s.id === id) ? '' : 'none';
+        });
+        updateActiveLink(id);
+        if (pushHash) history.replaceState(null, '', '#' + id);
+        window.scrollTo(0, 0);
+      }
+  
+      document.addEventListener('click', function (e) {
+        const a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        const id = a.getAttribute('href').slice(1);
+        if (!sections.some(s => s.id === id)) return;
+        e.preventDefault();
+        showSection(id);
+      });
+  
+      const targetFromHash = (location.hash || '#about').slice(1);
+      const initialId =
+        sections.find(s => s.id === targetFromHash)?.id ||
+        (sections[0] ? sections[0].id : null);
+  
+      if (initialId) showSection(initialId, false);
+    }
+  
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initTabs);
+    } else {
+      initTabs();
+    }
+  })();
+  </script>
+  
+  
+
+
+<script>  // sections will display when u will click or menu 
+  (function () {
+    // Grab every <section> that has an id (about, certificates, projects, skills, experience-timeline, publications, contact, etc.)
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+  
+    // Show exactly one section; hide the rest (no CSS classes needed)
+    function showSection(id, pushHash = true) {
+      sections.forEach(s => {
+        if (s.id === id) {
+          s.style.display = '';     // show (let your existing layout apply)
+        } else {
+          s.style.display = 'none'; // hide
+        }
+      });
+      if (pushHash) history.replaceState(null, '', '#' + id);
+      window.scrollTo(0, 0);
+    }
+  
+    // Intercept clicks on ANY anchor that links to a hash (#about, #certificates, etc.)
+    document.addEventListener('click', function (e) {
+      const a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+  
+      const id = a.getAttribute('href').slice(1);
+      if (!id) return;
+  
+      // Only handle if that id matches one of our sections
+      if (sections.some(s => s.id === id)) {
+        e.preventDefault();
+        showSection(id);
+      }
+    });
+  
+    // On page load, open the section from the URL hash if present, else default to "about" (or the first section if "about" doesn't exist)
+    const targetFromHash = (location.hash || '#about').slice(1);
+    const initialId =
+      sections.find(s => s.id === targetFromHash)?.id ||
+      (sections[0] ? sections[0].id : null);
+  
+    if (initialId) showSection(initialId, false);
+  })();
+  </script>
+  
 
 
 </body>

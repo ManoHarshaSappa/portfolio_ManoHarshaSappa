@@ -6,6 +6,10 @@
   }
 
 
+
+
+
+
   body {
     font-family: 'Poppins', sans-serif;
     background-color: #121212;
@@ -17,6 +21,24 @@
   flex-direction: column;
 
   }
+
+  
+/* Dark overlay above the video, below your page content */
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* Increased from 0.45 → 0.65 for darker look */
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+  /* Tabbed sections */
+.tab-section { display: none; }
+.tab-section.active { display: block; }
+
+/* Optional: highlight active menu item */
+.menu a.active { text-decoration: underline; }
   
   .scroll-container {
     scroll-snap-type: y mandatory;
@@ -52,6 +74,9 @@
     right: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  /* New line: subtle white separator */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     
   }
   
