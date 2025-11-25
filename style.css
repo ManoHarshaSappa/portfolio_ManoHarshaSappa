@@ -373,21 +373,80 @@
   
   
   
-  .lets-talk-btn a {
-    display: inline-block;
-    background: linear-gradient(135deg, #a855f7, #9333ea);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 12px 28px;
-    border-radius: 12px;
-    transition: background 0.3s ease, transform 0.2s;
-    font-size: 16px;
+  /* Container for the 3 buttons */
+.lets-talk-btn {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+/* Base pill button */
+.lets-talk-btn a,
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 12px 30px;
+  border-radius: 999px;
+
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: #020617;
+  color: #e5e7eb;
+
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.7);
+  transition: background 0.25s ease, border-color 0.25s ease,
+              transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.lets-talk-btn a i,
+.hero-btn i {
+  font-size: 18px;
+}
+
+/* Primary (Explore My Work) – subtle gradient but same pill shape */
+.hero-btn-primary {
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  border-color: rgba(191, 219, 254, 0.9);
+}
+
+/* Secondary (Download Resume / Let’s Talk) – outline style */
+.hero-btn-secondary,
+.hero-btn-ghost {
+  background: #020617;
+}
+
+/* Hover effects */
+.hero-btn-primary:hover,
+.lets-talk-btn a.hero-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(129, 140, 248, 0.7);
+}
+
+.hero-btn-secondary:hover,
+.hero-btn-ghost:hover,
+.lets-talk-btn a:not(.hero-btn-primary):hover {
+  background: #030712;
+  border-color: #cbd5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.9);
+}
+
+/* Mobile: center */
+@media (max-width: 768px) {
+  .lets-talk-btn {
+    justify-content: center;
   }
-  .lets-talk-btn a:hover {
-    background: linear-gradient(135deg, #9333ea, #a855f7);
-    transform: translateY(-2px);
-  }
+}
+
+
+
   
   /* Right Side Image */
   .about-right {
@@ -1955,55 +2014,6 @@ text-align: center; }
   }
 
 
-
-/* 👈download B.resume-download-btn.clicked {
-  box-shadow: 0 0 30px #1ed760cc;
-  transform: scale(1.15);
-}
-utton */
-  .resume-download-btn {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 70px;
-    height: 70px;
-    background: radial-gradient(circle at 30% 30%, #ffffff, #d1f9d4);
-    border: 3px solid rgba(29, 185, 84, 0.8);
-    color: #1db954;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 26px;
-    font-weight: bold;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    z-index: 1001;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(6px);
-  }
-  
-  .resume-download-btn::after {
-    content: "";
-    position: absolute;
-    width: 70%;
-    height: 70%;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
-    transform: scale(0);
-  }
-  
-  .resume-download-btn:hover::after {
-    transform: scale(1.3);
-  }
-  
-  .resume-download-btn:hover {
-    background: radial-gradient(circle at 30% 30%, #e9fce7, #c4f3c2);
-    transform: scale(1.1);
-    box-shadow: 0 0 25px #1db95480;
-  }
-  
   
   
 

@@ -76,9 +76,32 @@
               </div>
               
       
-            <div class="lets-talk-btn">
-              <a href="https://www.linkedin.com/in/contactmanoharshasappa/" target="_blank">Let’s Talk</a>
-            </div>
+              <div class="lets-talk-btn">
+                <!-- 1. Let’s Talk -->
+                <a href="https://www.linkedin.com/in/contactmanoharshasappa/"
+                   target="_blank"
+                   class="hero-btn hero-btn-ghost">
+                  <i class="fa-regular fa-message"></i>
+                  <span>Let’s Talk</span>
+                </a>
+              
+                <!-- 2. Explore My Work (scroll to projects) -->
+                <a href="#projects"
+                   class="hero-btn hero-btn-primary">
+                  <i class="fa-solid fa-rocket"></i>
+                  <span>Explore My Work</span>
+                </a>
+              
+                <!-- 3. Download Resume -->
+                <a href="resume/RESUME_SMH.pdf"
+                   download
+                   class="hero-btn hero-btn-secondary"
+                   title="Download Resume">
+                  <i class="fa-solid fa-cloud-arrow-down"></i>
+                  <span>Download Resume</span>
+                </a>
+              </div>
+              
           </div>
       
           <!-- Right: Image -->
@@ -1134,19 +1157,9 @@
 </script>
 
 
-<a href="resume/RESUME_SMH.pdf" download class="resume-download-btn" title="Download Resume">
-  <i class="fa-solid fa-cloud-arrow-down"></i>
 
 
-</a>
 
-<script>
-  const btn = document.getElementById('resumeButton');
-  btn.addEventListener('click', function () {
-    btn.classList.add('clicked');
-    setTimeout(() => btn.classList.remove('clicked'), 1000);
-  });
-</script>
 
 <script>
   (function () {
