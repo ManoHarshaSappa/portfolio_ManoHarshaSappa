@@ -29,18 +29,7 @@
   
   /* Optional: subtle grain texture on top */
   body::before {
-    content: "";
-    position: fixed;           /* stays fixed while scrolling */
-    inset: 0;
-    pointer-events: none;      /* don’t block clicks */
-  
-    background-image: url("images/Backgroundmain.jpg");
-    background-repeat: repeat;
-    background-size: 300px 300px;  /* adjust to taste */
-  
-    opacity: 0.18;             /* how strong the grain is */
-    mix-blend-mode: soft-light;/* make it blend into the dark */
-    z-index: -1;               /* sit behind all content */
+    content: none;            /* sit behind all content */
   }
   
   
@@ -651,7 +640,7 @@ section p {
 /* === Experience Section Final Layout === */
 
 #experience-timeline {
-  padding: 40px 0;
+  padding: 83px 65px;
   /* no forced full-screen height */
   min-height: auto;      /* or just delete this line */
 
@@ -1032,13 +1021,6 @@ section p {
 
 
 
-
-
-
-
-
-
-
 /* =========================
    PROJECTS SECTION (FULL)
    ========================= */
@@ -1046,109 +1028,108 @@ section p {
 /* Section container */
 .section#projects {
   position: relative;
-  /* let content decide height */
-  min-height: auto;          /* or delete */
-  padding: 40px 20px;
+  min-height: auto;
+  padding: 83px 65px;     /* tighter padding */
   z-index: 1;
   overflow: hidden;
 }
 
-
-/* Subtle background image overlay */
+/* No background overlay */
 .section#projects::before {
   content: none;
 }
 
 /* Global wrapper */
 .container {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
-
-
+/* Tag chips */
 .contact-tag,
 .Cert-tag,
 .con-tag {
-    background-color: #1e293b;
-    display: block;
-    color: #60a5fa;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 13px;
-    margin: 0 auto 10px;
-    font-weight: 600;
-    box-shadow: 0 0 8px #3b82f6;
-    animation: shineGlow 2.5s infinite ease-in-out;
-    transition: all 0.3s ease-in-out;
-    width: fit-content;
+  background-color: #1e293b;
+  display: block;
+  color: #60a5fa;
+  padding: 3px 10px;
+  border-radius: 18px;
+  font-size: 11px;
+  margin: 0 auto 8px;
+  font-weight: 600;
+  box-shadow: 0 0 6px #3b82f6;
+  animation: shineGlow 2.5s infinite ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: fit-content;
 }
+
 /* Heading + underline + subtext */
 .section-heading {
-  font-size: 2.5rem;
-  line-height: 1;
+  font-size: 2rem;          /* smaller heading */
+  line-height: 1.05;
   font-weight: 800;
   color: #ffffff;
-  margin: 14px 0 6px;
+  margin: 10px 0 4px;
   text-align: center;
 }
 
 .section-underline {
-  width: 80px;
-  height: 4px;
-  margin: 0.25rem auto 0rem;
+  width: 70px;
+  height: 3px;
+  margin: 0.2rem auto 0;
   background: linear-gradient(90deg, #3b82f6, #22c55e);
   border-radius: 999px;
 }
 
 .section-subtext {
-  max-width: 760px;
-  margin: 0 auto 0rem;
-  font-size: 1.05rem;
+  max-width: 720px;
+  margin: 0 auto 0;
+  font-size: 0.9rem;        /* smaller text */
   color: #d1d5db;
-  line-height: 1.75rem;
+  line-height: 1.45rem;
   text-align: center;
 }
 
 /* ===== ROW LAYOUTS ===== */
 
 /* Row 1: 3 featured cards */
-.featured-grid{
+.featured-grid {
   display: grid;
-  gap: 2rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 0.5rem;
+  gap: 1.25rem;             /* smaller gap */
+  margin-top: 0.4rem;
 }
 
 /* Row 2 & 3: 4 normal cards */
-.projects-grid{
+.projects-grid {
   display: grid;
-  gap: 2rem;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 2rem;
+  gap: 1.25rem;
+  margin-top: 1.3rem;
 }
 
 /* Helper to hide row 3 initially */
-.is-hidden { display: none; }
+.is-hidden {
+  display: none;
+}
 
 /* ===== PROJECT CARD ===== */
 
 .project-card {
   background-color: #10131d;
-  border-radius: 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px #111827;
   overflow: hidden;
   color: #f8fafc;
-  box-shadow: 0 0 0 1px #1f2937;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Ensure old flex-basis rules don't interfere */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   flex: initial;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 12px rgba(168, 85, 247, 0.22);
+  transform: translateY(-4px);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.22);
 }
 
 /* Preview banner */
@@ -1160,7 +1141,7 @@ section p {
 
 .project-preview img {
   width: 100%;
-  height: 130px;
+  height: 95px;             /* smaller image height */
   object-fit: cover;
   display: block;
   border-bottom: 2px solid #4c1d95;
@@ -1170,21 +1151,21 @@ section p {
 }
 
 .project-card:hover .project-preview img {
-  transform: scale(1.06);
+  transform: scale(1.05);
   filter: grayscale(0%);
 }
 
-/* Top-right GitHub icon with animated hover color */
+/* Top-right GitHub icon */
 .project-lock {
   position: absolute;
-  top: 10px;
-  right: 12px;
-  font-size: 22px;
+  top: 8px;
+  right: 10px;
+  font-size: 18px;
 }
 
 .project-lock a i {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 20px;
   transition: color 0.6s ease-in-out;
 }
 
@@ -1202,64 +1183,64 @@ section p {
 
 /* Card body */
 .project-content {
-  padding: 1.1rem;
+  padding: 0.7rem 0.8rem;    /* less padding */
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .project-title {
-  font-size: 1.05rem;
+  font-size: 0.9rem;         /* smaller title */
   font-weight: 700;
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.35rem;
   color: #ffffff;
 }
 
 .project-description {
-  font-size: 0.95rem;
+  font-size: 0.86rem;        /* smaller description */
+  line-height: 1.4;
   color: #cbd5e1;
-  line-height: 1.6;
   text-align: justify;
 }
 
-/* Tech badges (your HTML uses .skill-badge) */
+/* Tech badges */
 .project-skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 0rem;
+  gap: 0.35rem;
+  margin-bottom: 0.2rem;
   justify-content: flex-start;
 }
 
 .skill-badge {
-  font-size: 13px;
+  font-size: 11px;           /* smaller badges */
+  padding: 3px 8px;
   background-color: #0f172a;
-  padding: 6px 12px;
-  border-radius: 30px;
+  border-radius: 24px;
   color: #e2e8f0;
   border: 1px solid #334155;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
 }
 
-/* Optional meta section (supports your existing classes if used) */
+/* Optional meta section if used */
 .project-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1.25rem;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .project-meta-item {
   background-color: #1f2937;
   color: #f8fafc;
-  font-size: 0.8rem;
-  padding: 0.4rem 0.75rem;
-  border-radius: 8px;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
 /* Divider */
@@ -1268,12 +1249,14 @@ section p {
 }
 
 /* Footer link */
-.project-footer { margin-top: auto;
-text-align: center; }
+.project-footer {
+  margin-top: auto;
+  text-align: center;
+}
 
 .project-visit-link {
   color: #3b82f6;
-  font-size: 14px;
+  font-size: 12px;           /* smaller link */
   text-decoration: none;
   display: inline-block;
   transition: color 0.25s ease, text-decoration-color 0.25s ease;
@@ -1289,19 +1272,19 @@ text-align: center; }
 
 .show-more-container {
   text-align: center;
-  margin: 40px 0 20px;
+  margin: 28px 0 16px;
 }
 
 #toggleProjects {
   background-color: transparent;
   border: 1px solid #3b82f6;
   color: #3b82f6;
-  padding: 10px 20px;
-  border-radius: 30px;
+  padding: 8px 16px;
+  border-radius: 26px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #toggleProjects:hover {
@@ -1319,24 +1302,17 @@ text-align: center; }
 @media (max-width: 900px) {
   .featured-grid { grid-template-columns: repeat(2, 1fr); }
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
-  .project-preview img { height: 200px; }
+  .project-preview img { height: 130px; }   /* still smaller than before */
 }
 
 @media (max-width: 600px) {
-  .featured-grid, .projects-grid { grid-template-columns: 1fr; }
-  .project-preview img { height: 190px; }
-  .section-heading { font-size: 2rem; }
+  .featured-grid,
+  .projects-grid { grid-template-columns: 1fr; }
+
+  .project-preview img { height: 130px; }
+
+  .section-heading { font-size: 1.8rem; }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1447,9 +1423,9 @@ text-align: center; }
 }
 
 .skill-badge {
-    font-size: 13px;
+    font-size: 9px;
     background-color: #0f172a;
-    padding: 6px 12px;
+    padding: 6px 4px;
     border-radius: 30px;
     color: #e2e8f0;
     border: 1px solid #334155;
@@ -1840,7 +1816,7 @@ text-align: center; }
 
 #publications {
   position: relative;
-  padding: 60px 20px;
+  padding: 83px 65px;
   overflow: hidden;
   z-index: 1;
 }
