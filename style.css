@@ -895,6 +895,207 @@ brands-title {
 
 
 
+
+
+
+/* ===========================
+   SKILLS & SERVICES SECTION
+=========================== */
+
+#skills {
+  padding: 80px 80px;
+  color: #e5e7eb;
+  position: relative;
+  z-index: 1;
+}
+
+#skills .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Section heading + intro */
+#skills .section-heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+
+#skills .intro-subtext {
+  text-align: center;
+  font-size: 15px;
+  color: #cbd5e1;
+  margin: 0 auto 28px;
+}
+
+/* Grid of cards */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+/* Individual skill card */
+.skill-card {
+  background: radial-gradient(circle at top, #111827 0, #020617 55%, #020617 100%);
+  border-radius: 16px;
+  padding: 18px 18px 20px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow:
+    0 18px 40px rgba(15, 23, 42, 0.85),
+    0 0 0 1px rgba(15, 23, 42, 0.9);
+  transition: transform 0.22s ease, box-shadow 0.22s ease,
+              border-color 0.22s ease, background 0.22s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(248, 250, 252, 0.25);
+  box-shadow:
+    0 20px 55px rgba(15, 23, 42, 0.95),
+    0 0 24px rgba(168, 85, 247, 0.35);
+  background: radial-gradient(circle at top left, #111827 0, #020617 60%);
+}
+
+/* Card header: icon + title */
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.skill-card-header h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+/* Icon chip */
+.icon-wrapper {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 0,
+              rgba(248, 250, 252, 0.9),
+              rgba(168, 85, 247, 0.6));
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.55);
+  color: #020617;
+}
+
+.icon-wrapper i {
+  font-size: 18px;
+}
+
+/* Description */
+.skill-card-text {
+  font-size: 14px;
+  color: #cbd5e1;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Pills list */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-item {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background: rgba(15, 23, 42, 0.95);
+  color: #e5e7eb;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s ease, border-color 0.2s ease,
+              transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-item:hover {
+  background: radial-gradient(circle at top, #1e293b 0, #020617 70%);
+  border-color: rgba(96, 165, 250, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 0 18px rgba(37, 99, 235, 0.55);
+}
+
+/* ===========================
+   Additional skills row
+=========================== */
+
+.additional-skills {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(30, 64, 175, 0.4);
+}
+
+.additional-skills h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e5e7eb;
+  margin-bottom: 10px;
+}
+
+.additional-skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* reuse .skill-item for pills */
+
+/* ===========================
+   Responsive tweaks
+=========================== */
+
+@media (max-width: 992px) {
+  #skills {
+    padding: 70px 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  #skills {
+    padding: 60px 22px;
+  }
+  
+  #skills .section-heading {
+    font-size: 26px;
+  }
+  
+  .skill-card {
+    padding: 16px 14px 18px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ========================
    Certificates Section
 ======================== */
