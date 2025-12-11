@@ -225,161 +225,6 @@
 
 
 
-
-
-      <section id="certificates" class="section">
-        <div class="container" data-aos="zoom-in-up">
-          
-      
-          <!-- Main Title -->
-          <h1 class="section-heading">Professional Certifications</h1>
-          <div class="section-underline"></div>
-    
-          <!-- Featured Certificate: AWS Cloud Foundations -->
-    <div class="featured-cert-wrapper">
-        <div class="cert-text">
-          <h2>AWS Academy Cloud Foundations</h2>
-          <p>
-            This certification covers the fundamental concepts of cloud computing, AWS core services, security, architecture, pricing, and support. It establishes a strong foundation for cloud-related career paths.
-          </p>
-          <p>
-            <strong>Issued by:</strong> Amazon Web Services &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-            <strong>Date:</strong> March 2024
-          </p>
-          
-          
-        </div>
-        <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-image">
-          <img src="Certificates/aws-academy-graduate-aws-academy-cloud-foundations.png" alt="AWS Cloud Foundations Badge" />
-        </a>
-      </div>
-      
-      
-
-
-
-
-      
-          <!-- Total Certificate Count -->
-          <p class="section-subtext">
-            Total Certifications: 8
-          </p>
-      
-          <!-- Scrollable Wrapper + Arrows -->
-          <div class="cert-carousel-wrapper">
-            
-      
-            <div class="certification-scroll" id="cert-track">
-              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-                <img src="Certificates/AES ACADEMY CLOUD.png" alt="AWS Cloud">
-                <h3>AWS Academy Cloud Foundations</h3>
-                <p>AWS · Mar 2024</p>
-              </a>
-      
-              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-                <img src="Certificates/Tata Groups.png" alt="Tata Group">
-                <h3>Tata Group – Data Visualisation</h3>
-                <p>Forage · Mar 2025</p>
-              </a>
-      
-              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-                <img src="Certificates/DevOps Foundation.png" alt="DevOps">
-                <h3>DevOps Foundations: Microservices</h3>
-                <p>CompTIA · Feb 2025</p>
-              </a>
-      
-              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-                <img src="Certificates/Python Certificare.png" alt="Python Certificate">
-                <h3>Python (Basic)</h3>
-                <p>HackerRank · Apr 2025</p>
-              </a>
-      
-              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-                <img src="Certificates/Generative Ai .png" alt="Generative AI">
-                <h3>Generative AI – A Way of Life</h3>
-                <p>Analytics Vidhya · Mar 2025</p>
-              </a>
-      
-              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-                <img src="Certificates/Intro to Career Skills in data .png" alt="Career Skills Analytics">
-                <h3>Intro to Career Skills in Data Analytics</h3>
-                <p>LinkedIn Learning · Feb 2025</p>
-              </a>
-      
-              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-                <img src="Certificates/Business analysis.png" alt="Business Analysis">
-                <h3>Business Analysis Foundations</h3>
-                <p>LinkedIn Learning · Feb 2025</p>
-              </a>
-      
-              <a href="https://www.linkedin.com/in/contactmanoharshasappa/details/certifications/" target="_blank" class="cert-card">
-                <img src="Certificates/Excel VBA.png" alt="Excel VBA">
-                <h3>Excel VBA: Managing Files and Data</h3>
-                <p>LinkedIn Learning · Mar 2025</p>
-              </a>
-            </div>
-      
-           
-          </div>
-          <div class="cert-nav-buttons">
-            <button class="arrow-btn" id="cert-prev">
-              <i class="fas fa-arrow-left"></i>
-            </button>
-            <button class="arrow-btn" id="cert-next">
-              <i class="fas fa-arrow-right"></i>
-            </button>
-          </div>
-          
-        </div>
-      </section>
-      <script>
-  const track       = document.getElementById('cert-track');
-  const prevBtn     = document.getElementById('cert-prev');
-  const nextBtn     = document.getElementById('cert-next');
-  const certTotalEl = document.getElementById('cert-total'); // optional
-  const cards       = Array.from(track.querySelectorAll('.cert-card'));
-
-  let activeIndex = 0;
-
-  function setActive(index) {
-    if (!cards.length) return;
-
-    // wrap around
-    if (index < 0) index = cards.length - 1;
-    if (index >= cards.length) index = 0;
-    activeIndex = index;
-
-    // toggle .active class
-    cards.forEach(card => card.classList.remove('active'));
-    const activeCard = cards[activeIndex];
-    activeCard.classList.add('active');
-
-    // center this card in the scroll container
-    activeCard.scrollIntoView({
-      behavior: 'smooth',
-      inline: 'center',
-      block: 'nearest'
-    });
-  }
-
-  prevBtn.addEventListener('click', () => setActive(activeIndex - 1));
-  nextBtn.addEventListener('click', () => setActive(activeIndex + 1));
-
-  // Also allow clicking a card to focus it
-  cards.forEach((card, idx) => {
-    card.addEventListener('click', () => setActive(idx));
-  });
-
-  // Total count if you use: Total Certifications: <span id="cert-total"></span>
-  if (certTotalEl) {
-    certTotalEl.textContent = cards.length;
-  }
-
-  // Initial state: first card big
-  setActive(0);
-</script>
-
-      
       
 
 <section id="projects" class="section">
@@ -672,9 +517,6 @@
 </script>
 
 
-      
-
-
 
 
 
@@ -689,7 +531,7 @@
     <h1 class="section-heading">Skills & Services</h1>
     <div class="section-underline"></div>
     <p class="intro-subtext">
-      I offer a range of services to help businesses build and optimize their digital presence.
+      I offer a range of services across data engineering, analytics, machine learning, AI, and cloud deployment.
     </p>
 
     <!-- SKILL CARDS GRID -->
@@ -705,20 +547,17 @@
         </div>
 
         <p class="skill-card-text">
-          Delivering reliable, validated data pipelines using Azure and big data technologies.
+          Delivering reliable, validated data pipelines on Azure and big data platforms.
         </p>
 
-        <div class="skill-pill-list">
-          <span class="skill-pill"><i class="devicon-azure-plain colored"></i> Azure Data Factory</span>
-          <span class="skill-pill"><i class="devicon-mysql-plain colored"></i> SQL</span>
-          <span class="skill-pill"><i class="devicon-azure-plain colored"></i> Event Hub</span>
-          <span class="skill-pill"><i class="devicon-azure-plain colored"></i> Data Lake</span>
-          <span class="skill-pill">
-            <i class="devicon-apachespark-plain-wordmark colored"></i> Databricks (PySpark)
-          </span>
-          <span class="skill-pill"><i class="devicon-azure-plain colored"></i> Azure Synapse</span>
-          <span class="skill-pill"><i class="fas fa-broom" style="color:#f39c12;"></i> Data Profiling</span>
-          
+        <div class="skill-list">
+          <span class="skill-item">Azure Data Factory</span>
+          <span class="skill-item">Data Lake</span>
+          <span class="skill-item">Databricks (PySpark)</span>
+          <span class="skill-item">Azure Synapse</span>
+          <span class="skill-item">SQL</span>
+          <span class="skill-item">Event Hub</span>
+          <span class="skill-item">Data Profiling</span>
         </div>
       </article>
 
@@ -728,23 +567,20 @@
           <div class="icon-wrapper">
             <i class="fas fa-chart-line"></i>
           </div>
-          <h3>Data Analyst & BI Services</h3>
+          <h3>Data Analyst &amp; BI Services</h3>
         </div>
 
         <p class="skill-card-text">
-          Turning raw data into clear, actionable insights with analytics and interactive dashboards.
+          Turning raw data into clear, actionable insights with analytics and dashboards.
         </p>
 
-        <div class="skill-pill-list">
-          <span class="skill-pill"><i class="devicon-python-plain colored"></i> Python</span>
-          <span class="skill-pill"><i class="devicon-mysql-plain colored"></i> SQL</span>
-          <span class="skill-pill"><i class="devicon-minitab-plain colored"></i> Tableau</span>
-          <span class="skill-pill"><i class="fas fa-chart-pie" style="color:#ff6f61;"></i> Data Visualization</span>
-          <span class="skill-pill"><i class="devicon-rabbitmq-original"></i> Power BI</span>
-          
-          <span class="skill-pill"><i class="devicon-pypi-plain colored"></i> Excel</span>
-          
-          
+        <div class="skill-list">
+          <span class="skill-item">Python</span>
+          <span class="skill-item">SQL</span>
+          <span class="skill-item">Excel</span>
+          <span class="skill-item">Power BI</span>
+          <span class="skill-item">Tableau</span>
+          <span class="skill-item">Data Visualization</span>
         </div>
       </article>
 
@@ -758,18 +594,17 @@
         </div>
 
         <p class="skill-card-text">
-          Building, tuning, and evaluating predictive models on structured data.
+          Building, tuning, and deploying predictive models for business use cases.
         </p>
 
-        <div class="skill-pill-list">
-          <span class="skill-pill"><i class="devicon-python-plain colored"></i> Python</span>
-          <span class="skill-pill"><i class="fas fa-vial" style="color:#ff9800;"></i> Feature Engineering</span>
-          <span class="skill-pill"><i class="devicon-numpy-plain colored"></i> NumPy</span>
-          <span class="skill-pill"><i class="fas fa-chart-line" style="color:#00c853;"></i> Model Evaluation</span>
-          <span class="skill-pill"><i class="devicon-scikitlearn-plain colored"></i> scikit-learn</span>
-          
-          
-          <span class="skill-pill"><i class="fas fa-sliders-h" style="color:#9b59b6;"></i> ModelTuning</span>
+        <div class="skill-list">
+          <span class="skill-item">Python</span>
+          <span class="skill-item">scikit-learn</span>
+          <span class="skill-item">TensorFlow / PyTorch</span>
+          <span class="skill-item">Feature Engineering</span>
+          <span class="skill-item">Model Evaluation</span>
+          <span class="skill-item">Model Tuning</span>
+          <span class="skill-item">Model Deployment</span>
         </div>
       </article>
 
@@ -779,21 +614,43 @@
           <div class="icon-wrapper">
             <i class="fas fa-brain"></i>
           </div>
-          <h3>AI & NLP Development</h3>
+          <h3>AI &amp; NLP Development</h3>
         </div>
 
         <p class="skill-card-text">
-          Creating intelligent systems using NLP, large language models, and retrieval-augmented pipelines.
+          Designing LLM and RAG-based solutions for intelligent search and automation.
         </p>
 
-        <div class="skill-pill-list">
-          <span class="skill-pill"><i class="fas fa-code-branch" style="color:#ff6d00;"></i> Hugging Face</span>
-          <span class="skill-pill"><i class="fas fa-robot" style="color:#ffffff;"></i> OpenAI API</span>
-          <span class="skill-pill"><i class="fas fa-stream" style="color:#03a9f4;"></i> LangChain</span>
-          <span class="skill-pill"><i class="fas fa-magic" style="color:#e91e63;"></i> Prompt Engineering</span>
-          <span class="skill-pill"><i class="fas fa-retweet" style="color:#607d8b;"></i> RAG</span>
-          <span class="skill-pill"><i class="devicon-tensorflow-original colored"></i> BERT / Transformers</span>
-         
+        <div class="skill-list">
+          <span class="skill-item">OpenAI API</span>
+          <span class="skill-item">Hugging Face</span>
+          <span class="skill-item">LangChain</span>
+          <span class="skill-item">RAG</span>
+          <span class="skill-item">Prompt Engineering</span>
+          <span class="skill-item">Transformers / BERT</span>
+        </div>
+      </article>
+
+      <!-- DevOps, Testing & Cloud -->
+      <article class="skill-card">
+        <div class="skill-card-header">
+          <div class="icon-wrapper">
+            <i class="fas fa-cloud-upload-alt"></i>
+          </div>
+          <h3>DevOps, Testing &amp; Cloud</h3>
+        </div>
+
+        <p class="skill-card-text">
+          Automating testing and deployments to deliver production-ready data products.
+        </p>
+
+        <div class="skill-list">
+          <span class="skill-item">Git &amp; GitHub</span>
+          <span class="skill-item">CI/CD</span>
+          <span class="skill-item">Docker</span>
+          <span class="skill-item">AWS</span>
+          <span class="skill-item">Pytest</span>
+          <span class="skill-item">Cypress</span>
         </div>
       </article>
 
@@ -807,18 +664,17 @@
         </div>
 
         <p class="skill-card-text">
-          Designing, optimizing, and managing structured databases for scalable data operations.
+          Designing and querying relational & NoSQL databases for analytics and applications.
         </p>
 
-        <div class="skill-pill-list">
-          <span class="skill-pill">
-            <i class="devicon-mysql-plain colored" style="color:#ffc107;"></i> MySQL
-          </span>
-          <span class="skill-pill"><i class="fas fa-random" style="color:#4caf50;"></i> Joins &amp; Aggregations</span>
-          <span class="skill-pill"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
-          <span class="skill-pill"><i class="devicon-microsoftsqlserver-plain colored"></i> MS SQL Server</span>
-          <span class="skill-pill"><i class="fas fa-project-diagram" style="color:#ffc107;"></i> ER Modeling</span>
-          <span class="skill-pill"><i class="fas fa-network-wired" style="color:#9c27b0;"></i> Normalization</span>
+        <div class="skill-list">
+          <span class="skill-item">PostgreSQL</span>
+          <span class="skill-item">MySQL</span>
+          <span class="skill-item">MS SQL Server</span>
+          <span class="skill-item">MongoDB</span>
+          <span class="skill-item">Joins &amp; Aggregations</span>
+          <span class="skill-item">Data Modeling</span>
+          <span class="skill-item">Normalization</span>
         </div>
       </article>
 
@@ -827,24 +683,32 @@
     <!-- ADDITIONAL SKILLS -->
     <div class="additional-skills">
       <h4>Additional Skills</h4>
-      <div class="tags">
-        <span class="skill-tag"><i class="fas fa-robot" style="color:#ffffff;"></i> OpenAI API</span>
-        <span class="skill-tag"><i class="fas fa-brain" style="color:#9c27b0;"></i> ChatGPT</span>
-        <span class="skill-tag"><i class="fas fa-layer-group" style="color:#00bcd4;"></i> Transformers</span>
-        <span class="skill-tag"><i class="fas fa-magic" style="color:#e91e63;"></i> LangChain</span>
-        <span class="skill-tag"><i class="fas fa-retweet" style="color:#4caf50;"></i> RAG Pipelines</span>
-        <span class="skill-tag"><i class="fas fa-cloud" style="color:#2196f3;"></i> Vertex AI</span>
-        <span class="skill-tag"><i class="devicon-jupyter-plain colored"></i> Jupyter</span>
-        <span class="skill-tag"><i class="devicon-vscode-plain colored"></i> VS Code</span>
-        <span class="skill-tag"><i class="fas fa-globe" style="color:#00c853;"></i> Google Colab</span>
-        <span class="skill-tag"><i class="fab fa-adobe" style="color:#ff61f6;"></i> Adobe XD</span>
-        <span class="skill-tag"><i class="fas fa-chart-pie" style="color:#fbbc05;"></i> Power BI</span>
-        <span class="skill-tag"><i class="devicon-minitab-plain colored"></i> Tableau</span>
+      <div class="skill-list additional-skill-list">
+        <span class="skill-item">HTML &amp; CSS</span>
+        <span class="skill-item">JavaScript (ES6+)</span>
+        <span class="skill-item">React</span>
+        <span class="skill-item">Next.js</span>
+        <span class="skill-item">Jupyter</span>
+        <span class="skill-item">Google Colab</span>
+        <span class="skill-item">Vertex AI</span>
+        <span class="skill-item">Power BI</span>
+        <span class="skill-item">Tableau</span>
+        <span class="skill-item">VS Code</span>
+        <span class="skill-item">ChatGPT</span>
       </div>
     </div>
 
-  </div><!-- /.container -->
+  </div>
 </section>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -857,9 +721,11 @@
     <div class="section-underline"></div>
 
     <div class="experience-grid">
-      <!-- LEFT: Internships -->
+      <!-- LEFT: Tech / Data & AI Roles -->
       <div class="experience-column experience-left">
+        <h2 class="column-heading">Data &amp; AI Experience</h2>
 
+        <!-- Data Engineering Intern -->
         <div class="experience-card">
           <div class="card-header">
             <img src="images/Human-Cyber.png" alt="HCP Tech Logo">
@@ -871,24 +737,34 @@
               </h3>
               <p class="company">
                 Human-Cyber Performance Tech, LLC · Internship <br>
-                Aug 2025 – Present · 2 mos · Fairfax, VA · Remote
+                Aug 2025 – Dec 2025 · Fairfax, VA · Remote
               </p>
             </div>
           </div>
-          <ul>
-            <li>Built scalable KSAMDS database and CI/CD pipelines to expand the O*NET framework and improve release reliability.</li>
-           <li>Applied multilingual web scraping and designed a multifactor search tool for advanced workforce analytics and contextual retrieval.</li>
-          </ul>
-          <div class="skills icon-skills">
-            <div class="skill-badge"><i class="devicon-azuresqldatabase-plain colored"></i><span>Azure SQL</span></div>
-            <div class="skill-badge"><i class="devicon-docker-plain colored"></i><span>CI/CD</span></div>
-            <div class="skill-badge"><i class="devicon-git-plain colored"></i><span>DevOps</span></div>
-            <div class="skill-badge"><i class="devicon-python-plain colored"></i><span>Python</span></div>
 
+          <ul class="role-points">
+            <li>Built scalable KSAMDS database and CI/CD pipelines to expand the global O*NET repository and improve release reliability.</li>
+            <li>Developed automated multilingual web scraping on AWS for O*NET data, generating embeddings and synthetic records, and orchestrated the end-to-end data + UI stack with Terraform.</li>
+          </ul>
+          
+
+          <div class="skills icon-skills">
+            <div class="skill-badge">
+              <i class="devicon-azuresqldatabase-plain colored"></i><span>Azure SQL</span>
+            </div>
+            <div class="skill-badge">
+              <i class="devicon-git-plain colored"></i><span>CI/CD</span>
+            </div>
+            <div class="skill-badge">
+              <i class="devicon-docker-plain colored"></i><span>DevOps</span>
+            </div>
+            <div class="skill-badge">
+              <i class="devicon-python-plain colored"></i><span>Python</span>
+            </div>
           </div>
         </div>
-        
 
+        <!-- Graduate Researcher -->
         <div class="experience-card">
           <div class="card-header">
             <img src="images/GM_LOGO.jpg" alt="GMU Logo">
@@ -900,39 +776,46 @@
               </h3>
               <p class="company">
                 George Mason University · Guide: Prof. Duoduo (Lindi) Liao <br>
-                Jun 2024 – Jun 2024 · Virginia, USA
+                Jun 2024 – Dec 2024 · Virginia, USA
               </p>
             </div>
           </div>
-          <ul>
+
+          <ul class="role-points">
             <li>Built a multimodal AI chatbot using Whisper and LLMs (LLaMA-2, Phi-2) for text and voice knowledge retrieval.</li>
             <li>Improved search accuracy by 25% with FAISS, Hugging Face, and LoRA+PEFT, deploying scalable RAG workflows.</li>
- 
+          </ul>
+
           <div class="skills icon-skills">
-            <div class="skill-badge"><i class="devicon-python-plain colored"></i><span>Python</span></div>
-            <div class="skill-badge"><i class="devicon-pytorch-original colored"></i><span>LLMs</span></div>
-            <div class="skill-badge"><i class="devicon-tensorflow-original colored"></i><span>RAG</span></div>
-            <div class="skill-badge"><i class="devicon-streamlit-plain colored"></i><span>Streamlit</span></div>
+            <div class="skill-badge">
+              <i class="devicon-python-plain colored"></i><span>Python</span>
+            </div>
+            <div class="skill-badge">
+              <i class="devicon-pytorch-original colored"></i><span>LLMs</span>
+            </div>
+            <div class="skill-badge">
+              <i class="devicon-tensorflow-original colored"></i><span>RAG</span>
+            </div>
+            <div class="skill-badge">
+              <i class="devicon-streamlit-plain colored"></i><span>Streamlit</span>
+            </div>
           </div>
         </div>
-        
+      </div>
 
-
-
-        
-    </div>
-
-      <!-- RIGHT: GMU timeline -->
+      <!-- RIGHT: GMU Athletics Timeline -->
       <div class="experience-column experience-right">
-        <div class="card-header gmu-header">
+        <h2 class="column-heading">On-Campus Experience</h2>
+
+        <div class="gmu-header">
           <img src="images/GM_LOGO.jpg" alt="GMU Logo">
           <div>
             <h3 class="highlighted-gmu">George Mason University Athletics</h3>
-            <p class="company">Fairfax, VA · Part-time · Jan 2024 – Present</p>
+            <p class="company">Fairfax, VA · Part-time · Jan 2024 – Dec 2025</p>
           </div>
         </div>
 
-        <div class="experience-card timeline-container">
+        <div class="experience-card timeline-card">
           <!-- IT Support Specialist -->
           <div class="gmu-role-block">
             <div class="timeline-dot-line">
@@ -941,15 +824,21 @@
             </div>
             <div class="role-content">
               <h3>IT Support Specialist</h3>
-              <p class="company">Mar 2024 – Present</p>
-              <ul>
-                <li>Provided access and system support for faculty/students.</li>
+              <p class="company">Mar 2024 – Dec 2025</p>
+              <ul class="role-points">
+                <li>Provided access and system support for faculty and students.</li>
                 <li>Resolved service issues and ensured continuity.</li>
               </ul>
               <div class="skills icon-skills">
-                <div class="skill-badge"><i class="devicon-windows8-original colored"></i><span>IT Support</span></div>
-                <div class="skill-badge"><i class="devicon-atom-original colored"></i><span>Communication</span></div>
-                <div class="skill-badge"><i class="devicon-angularmaterial-plain"></i><span>Troubleshooting</span></div>
+                <div class="skill-badge">
+                  <i class="devicon-windows8-original colored"></i><span>IT Support</span>
+                </div>
+                <div class="skill-badge">
+                  <i class="devicon-atom-original colored"></i><span>Communication</span>
+                </div>
+                <div class="skill-badge">
+                  <i class="devicon-angularmaterial-plain"></i><span>Troubleshooting</span>
+                </div>
               </div>
             </div>
           </div>
@@ -962,256 +851,477 @@
             <div class="role-content">
               <h3>Event Operations Assistant</h3>
               <p class="company">Jan 2024 – Present</p>
-              <ul>
+              <ul class="role-points">
                 <li>Coordinated logistics and technical readiness for events.</li>
                 <li>Partnered across teams to maintain service quality.</li>
               </ul>
               <div class="skills icon-skills">
-                <div class="skill-badge"><i class="devicon-trello-plain colored"></i><span>Event Mgmt</span></div>
-                <div class="skill-badge"><i class="devicon-jira-plain colored"></i><span>Coordination</span></div>
-                <div class="skill-badge"><i class="devicon-cucumber-plain colored"></i><span>Planning</span></div>
+                <div class="skill-badge">
+                  <i class="devicon-trello-plain colored"></i><span>Event Mgmt</span>
+                </div>
+                <div class="skill-badge">
+                  <i class="devicon-jira-plain colored"></i><span>Coordination</span>
+                </div>
+                <div class="skill-badge">
+                  <i class="devicon-cucumber-plain colored"></i><span>Planning</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div><!-- /right -->
-    </div><!-- /grid -->
-<div class="linkedin-btn-container">
-  <a href="https://www.linkedin.com/in/manoharshasappa/details/experience/" 
-     target="_blank" 
-     class="pill-btn">
-     See more experience on LinkedIn 
-     <i class="fas fa-external-link-alt"></i>
-  </a>
-</div>
-   
+
+        </div><!-- /.timeline-card -->
+      </div><!-- /.experience-right -->
+    </div><!-- /.experience-grid -->
+
+    <div class="linkedin-btn-container">
+      <a href="https://www.linkedin.com/in/manoharshasappa/details/experience/"
+         target="_blank"
+         class="pill-btn">
+        See more experience on LinkedIn
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+    </div>
+
   </div>
-  
-
-
 </section>
 
 
 
 
+
+
+
+
+
+
+<section id="certificates" class="section">
+  <div class="container" data-aos="zoom-in-up">
+
+    <!-- Main Title -->
+    <h1 class="section-heading">Professional Certifications</h1>
+    <div class="section-underline"></div>
+
+    <!-- FEATURED CERT: AWS -->
+    <div class="featured-cert-wrapper">
+      <div class="featured-card">
+        <div class="featured-card-body">
+          <h2 class="featured-title">AWS Academy Cloud Foundations</h2>
+          <p class="featured-text">
+            Covers core concepts of cloud computing, AWS services, security, architecture,
+            pricing, and support—forming a strong foundation for cloud and data engineering roles.
+          </p>
+
+          <div class="featured-meta">
+            <span><strong>Issued by:</strong> Amazon Web Services</span>
+            <span><strong>Date:</strong> March 2024</span>
+          </div>
+
+          <div class="featured-pills">
+            <span class="featured-pill">Cloud Fundamentals</span>
+            <span class="featured-pill">AWS Services</span>
+            <span class="featured-pill">Architecture &amp; Security</span>
+          </div>
+
+          <!-- Static info, not a link -->
+          <div class="featured-link">
+            <a href="https://www.linkedin.com/in/manoharshasappa/"
+               target="_blank"
+               style="text-decoration:none; color:inherit; display:inline-flex; align-items:center; gap:6px;">
+              Credential available on LinkedIn
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Badge image (no link) -->
+      <div class="cert-image">
+        <img src="Certificates/aws-academy-graduate-aws-academy-cloud-foundations.png"
+             alt="AWS Cloud Foundations Badge" />
+      </div>
+    </div>
+
+    <!-- TOTAL COUNT / SMALL STATS -->
+    <p class="section-subtext">
+      Total Certifications: <span id="cert-total">8</span> &nbsp;•&nbsp;
+      Focus Areas: Cloud · Data Analytics · DevOps · Programming
+    </p>
+
+    <!-- CAROUSEL -->
+    <div class="cert-carousel-wrapper">
+      <div class="certification-scroll" id="cert-track">
+        <div class="cert-card">
+          <img src="Certificates/AES ACADEMY CLOUD.png" alt="AWS Cloud">
+          <h3>AWS Academy Cloud Foundations</h3>
+          <p>AWS · Mar 2024</p>
+        </div>
+
+        <div class="cert-card">
+          <img src="Certificates/Tata Groups.png" alt="Tata Group">
+          <h3>Tata Group – Data Visualisation</h3>
+          <p>Forage · Mar 2025</p>
+        </div>
+
+        <div class="cert-card">
+          <img src="Certificates/DevOps Foundation.png" alt="DevOps">
+          <h3>DevOps Foundations: Microservices</h3>
+          <p>CompTIA · Feb 2025</p>
+        </div>
+
+        <div class="cert-card">
+          <img src="Certificates/Python Certificare.png" alt="Python Certificate">
+          <h3>Python (Basic)</h3>
+          <p>HackerRank · Apr 2025</p>
+        </div>
+
+        <div class="cert-card">
+          <img src="Certificates/Generative Ai .png" alt="Generative AI">
+          <h3>Generative AI – A Way of Life</h3>
+          <p>Analytics Vidhya · Mar 2025</p>
+        </div>
+
+        <div class="cert-card">
+          <img src="Certificates/Intro to Career Skills in data .png" alt="Career Skills Analytics">
+          <h3>Intro to Career Skills in Data Analytics</h3>
+          <p>LinkedIn Learning · Feb 2025</p>
+        </div>
+
+        <div class="cert-card">
+          <img src="Certificates/Business analysis.png" alt="Business Analysis">
+          <h3>Business Analysis Foundations</h3>
+          <p>LinkedIn Learning · Feb 2025</p>
+        </div>
+
+        <div class="cert-card">
+          <img src="Certificates/Excel VBA.png" alt="Excel VBA">
+          <h3>Excel VBA: Managing Files and Data</h3>
+          <p>LinkedIn Learning · Mar 2025</p>
+        </div>
+      </div>
+
+      <div class="cert-nav-buttons">
+        <button class="arrow-btn" id="cert-prev">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <button class="arrow-btn" id="cert-next">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const certTrack = document.getElementById('cert-track');
+  const prevBtn   = document.getElementById('cert-prev');
+  const nextBtn   = document.getElementById('cert-next');
+  const cards     = Array.from(certTrack.querySelectorAll('.cert-card'));
+  const totalSpan = document.getElementById('cert-total');
+
+  if (totalSpan) {
+    totalSpan.textContent = cards.length;
+  }
+
+  function scrollByCards(direction = 1) {
+    if (!cards.length) return;
+    const card = cards[0];
+    const gap  = parseFloat(getComputedStyle(certTrack).getPropertyValue('--gap')) || 24;
+    const scrollAmount = card.offsetWidth + gap;
+    certTrack.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  }
+
+  prevBtn.addEventListener('click', () => scrollByCards(-1));
+  nextBtn.addEventListener('click', () => scrollByCards(1));
+</script>
+
+
+
+
+
   
 
 
 
 
+<section id="publications" class="section">
+  <div class="container" data-aos="zoom-in-up">
 
+    <!-- Main Title -->
+    <h1 class="section-heading">Research Publication</h1>
+    <div class="section-underline"></div>
 
-  <section id="publications" class="section" >
-    <div class="container" data-aos="zoom-in-up">
-  
+    <!-- Layout: Left = Paper, Right = Award -->
+    <div class="pub-layout scroll-fade">
 
-  
-      <!-- Main Title -->
-      <h1 class="section-heading">Research Publication</h1>
-      <div class="section-underline"></div>
+      <!-- LEFT: MAIN PAPER DETAILS -->
+      <div class="pub-main">
+        <h2 class="pub-title">
+          Implementation and Analysis of Parallel Prefix Adders using FPGA
+        </h2>
 
-  
-      <div class="pub-top scroll-fade">
-        <h3 class="pub-title">Implementation and Analysis of Parallel Prefix Adders using FPGA</h3>
         <p class="pub-conference">
           Second International Conference on “Computational and Intelligent Techniques for Automation of Engineering Systems” (CITAES’22) · Jul 29, 2022
         </p>
-  
-        <a class="pub-button" href="https://drive.google.com/file/d/1yuEAeICiuPdiBC8oDiXfRMk-WG7tFmco/view" target="_blank">
-          Show Publication <i class="fas fa-arrow-up-right-from-square"></i>
-        </a>
-  
-        <p class="pub-description">
-            This research paper presents an in-depth design and analysis of Parallel Prefix Adders (PPAs) implemented using FPGA, focusing on various adder architectures such as Ladner Fischer, Kogge Stone, Spanning Tree, and Brent Kung Adders. The study evaluates critical performance metrics, including power consumption, delay, and FPGA utilization, utilizing Xilinx ISE for comprehensive analysis.
-        </p>
-        <p class="pub-description">
-            Recognized for its significant contributions to FPGA-based computing and optimization, this project was honored with the Best Paper Award at the CITAES’22 conference.
 
-        </p>
-
-        <!-- Divider -->
-        <hr style="border: 0.5px solid #2d2d2d; margin: 20px 0;">
-
-      <!-- 🔸 Bottom Part: Best Paper Award -->
-      <div class="title-wrapper" style="margin-top: 0px;">
-        <h2 class="section-title-right">Best Paper Award – CITAES’22</h2>
-        <div class="section-title-underline"></div>
-        
-      </div>
-  
-      <div class="pub-award-wrapper scroll-fade">
-        <div class="pub-left">
-          <p class="pub-conference">
-            Issued by Seshadri Rao Gudlavalleru Engineering College · Jul 2022 
-            , Associated with Jawaharlal Nehru Technological University, Kakinada
-          </p>
-  
-          <a class="pub-button" href="https://www.linkedin.com/in/contactmanoharshasappa/details/publications/" target="_blank">
-            Show on LinkedIn <i class="fas fa-arrow-up-right-from-square"></i>
+        <div class="pub-actions">
+          <a class="pub-button"
+             href="https://drive.google.com/file/d/1yuEAeICiuPdiBC8oDiXfRMk-WG7tFmco/view"
+             target="_blank">
+            Show Publication
+            <i class="fas fa-arrow-up-right-from-square"></i>
           </a>
-  
-          <p class="pub-description">
-            This award was presented to <strong>Sappa Manoharsha</strong> for outstanding research and presentation of
-            <em>"Implementation and Analysis of Parallel Prefix Adders using FPGA"</em> at the CITAES’22 conference.
-          </p>
-  
-          <p class="pub-description">
-            Recognized for its significant contributions to FPGA-based computing, the project received the  <strong>Best Paper Award.</strong>
-          </p>
-          <!-- Divider -->
-          <hr style="border: 0.5px solid #2d2d2d; margin: 20px 0;">
 
-          <div class="project-skills">
-            <span class="skill-tag"><i class="fas fa-microchip" style="color: #00c8ff;"></i> FPGA</span>
-<span class="skill-tag"><i class="fas fa-code" style="color: #f39c12;"></i> Verilog</span>
-<span class="skill-tag"><i class="fas fa-microchip" style="color: #9c27b0;"></i> VLSI</span>
-<span class="skill-tag"><i class="fas fa-project-diagram" style="color: #4caf50;"></i> Xilinx ISE</span>
-<span class="skill-tag"><i class="fas fa-project-diagram" style="color: #3f51b5;"></i> PPA</span>
-<span class="skill-tag"><i class="fas fa-tools" style="color: #ff9800;"></i> Hardware Optimization</span>
-<span class="skill-tag"><i class="fas fa-plus-square" style="color: #00bcd4;"></i> Digital Adders</span>
-<span class="skill-tag"><i class="fas fa-bolt" style="color: #f44336;"></i> Power Analysis</span>
-<span class="skill-tag"><i class="fas fa-clock" style="color: #607d8b;"></i> Delay Estimation</span>
-
-            </div>
-
+          <a class="pub-button ghost"
+             href="https://www.linkedin.com/in/contactmanoharshasappa/details/publications/"
+             target="_blank">
+            Show on LinkedIn
+            <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
         </div>
-  
-        <div class="pub-right">
-          <img src="Certificates/BEST PAPER AWARD.png" alt="Best Paper Award" class="award-image" />
-          <img src="Certificates/Best paper2.png" alt="Paper Certificate Summary" class="award-image" />
+
+        <p class="pub-description">
+          This research presents an in-depth design and analysis of Parallel Prefix Adders (PPAs) implemented using FPGA, comparing architectures such as Ladner Fischer, Kogge Stone, Spanning Tree, and Brent Kung. The work evaluates power consumption, delay, and FPGA utilization using Xilinx ISE to identify optimal adder designs.
+        </p>
+
+        <p class="pub-description">
+          Recognized for its contributions to FPGA-based computing and optimization, this project received the
+          <strong>Best Paper Award</strong> at the CITAES’22 conference.
+        </p>
+
+        <div class="pub-tags">
+          <span class="pub-tag"><i class="fas fa-microchip"></i> FPGA</span>
+          <span class="pub-tag"><i class="fas fa-code"></i> Verilog</span>
+          <span class="pub-tag"><i class="fas fa-project-diagram"></i> VLSI / PPA</span>
+          <span class="pub-tag"><i class="fas fa-project-diagram"></i> Xilinx ISE</span>
+          <span class="pub-tag"><i class="fas fa-tools"></i> Hardware Optimization</span>
+          <span class="pub-tag"><i class="fas fa-plus-square"></i> Digital Adders</span>
+          <span class="pub-tag"><i class="fas fa-bolt"></i> Power Analysis</span>
+          <span class="pub-tag"><i class="fas fa-clock"></i> Delay Estimation</span>
         </div>
       </div>
+
+      <!-- RIGHT: BEST PAPER AWARD BLOCK -->
+      <aside class="pub-side">
+        <h3 class="award-title">Best Paper Award – CITAES’22</h3>
+        <p class="award-meta">
+          Issued by Seshadri Rao Gudlavalleru Engineering College · Jul 2022<br>
+          Associated with Jawaharlal Nehru Technological University, Kakinada
+        </p>
+
+        <p class="pub-description">
+          This award was presented to <strong>Sappa Manoharsha</strong> for outstanding research and presentation of
+          <em>“Implementation and Analysis of Parallel Prefix Adders using FPGA”</em> at the CITAES’22 conference.
+        </p>
+
+        <p class="pub-description">
+          The work demonstrated strong innovation in optimizing adder architectures for power, delay, and hardware utilization, leading to its selection as the conference’s
+          <strong>Best Paper</strong>.
+        </p>
+
+        <div class="award-images">
+          <img src="Certificates/BEST PAPER AWARD.png"
+               alt="Best Paper Award Certificate"
+               class="award-image">
+          <img src="Certificates/Best paper2.png"
+               alt="Research Participation Certificate"
+               class="award-image">
+        </div>
+      </aside>
+
+    </div><!-- /.pub-layout -->
+
+  </div>
+</section>
+
+<!-- Scroll-fade animation (can be shared across sections) -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(".scroll-fade").forEach(el => observer.observe(el));
+  });
+</script>
+
   
+
+
+
+
+
+
+
+
+
+
+<section id="contact" class="section">
+  <div class="container contact-container" data-aos="zoom-in-up">
+
+    <!-- Section Title -->
+    <div class="contact-title-block">
+      <h1 class="section-heading">Let’s Create Something Amazing</h1>
+      <div class="section-underline"></div>
+      <p class="contact-intro">
+        Have questions, project ideas, or collaboration opportunities?
+        Reach out anytime — I usually respond within 24 hours.
+      </p>
     </div>
-  </section>
-  
+
+    <!-- Two-column layout -->
+    <div class="contact-grid">
+
+      <!-- LEFT: Profile / Info card -->
+      <div class="contact-card contact-profile">
+        <span class="contact-pill">Contact Details</span>
+
+        <h2 class="contact-name">Mano Harsha Sappa</h2>
+        <p class="contact-role">Data Analytics Graduate Student</p>
+
+        <ul class="contact-details">
+          <li>
+            <div class="icon-circle">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="detail-text">
+              <span class="detail-label">Location</span>
+              <span class="detail-value">Fairfax, VA, USA</span>
+            </div>
+          </li>
+          <li>
+            <div class="icon-circle">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="detail-text">
+              <span class="detail-label">Email</span>
+              <a class="detail-value" href="mailto:sappamanoharsha@gmail.com">
+                sappamanoharsha@gmail.com
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="icon-circle">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="detail-text">
+              <span class="detail-label">WhatsApp</span>
+              <a class="detail-value" href="tel:+15716639406">
+                +1 571-663-9406
+              </a>
+            </div>
+          </li>
+        </ul>
+
+        <p class="contact-blurb">
+          Open to collaborations, internships, and data/AI projects.
+          If something you’re building touches data, analytics, or AI —
+          I’d love to hear about it.
+        </p>
+
+        <div class="availability-row">
+          <span class="green-dot"></span>
+          <span>Available for new projects</span>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="contact-socials">
+          <a href="https://www.linkedin.com/in/contactmanoharshasappa/"
+             target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="devicon-linkedin-plain"></i>
+          </a>
+          <a href="https://github.com/ManoHarshaSappa"
+             target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="devicon-github-original"></i>
+          </a>
+          <a href="https://www.youtube.com/@UsAlludu"
+             target="_blank" rel="noopener" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="mailto:sappamanoharsha@gmail.com"
+             aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Contact form card -->
+      <div class="contact-card contact-form-card">
+        <span class="contact-pill pill-outline">Send a Message</span>
+
+        <h3 class="contact-form-title">Get In Touch</h3>
+        <p class="contact-form-subtitle">
+          Share a brief context about your idea, project, or question.
+        </p>
+
+        <form name="submit-to-google-sheet" class="contact-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text"
+                     id="name"
+                     name="Name"
+                     placeholder="Your name"
+                     required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email"
+                     id="email"
+                     name="Email"
+                     placeholder="Your email address"
+                     required>
+            </div>
+          </div>
+
+          <div class="form-field full-width">
+            <label for="message">Message</label>
+            <textarea id="message"
+                      name="Message"
+                      rows="5"
+                      placeholder="Tell me how I can help you"
+                      required></textarea>
+          </div>
+
+          <div class="form-footer">
+            <span class="form-hint">Your message goes straight to my inbox.</span>
+            <button type="submit" class="contact-submit">
+              Send Message
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div><!-- /.contact-grid -->
+
+  </div><!-- /.container -->
+
+  <!-- Google Sheet submit script -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1,
-      });
-  
-      document.querySelectorAll('.scroll-fade').forEach(el => {
-        observer.observe(el);
-      });
+    const scriptURL =
+      'https://script.google.com/macros/s/AKfycbzFOxT_49-WKwgQLDqJSDro6KLMmrOaTO7eSzQayJ9Xs5xtAKcFrB6F3btOoylsC8b12g/exec';
+    const form = document.forms['submit-to-google-sheet'];
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          alert("Thank you! Your message has been sent.");
+          form.reset();
+        })
+        .catch(error => console.error('Error!', error.message));
     });
   </script>
-  
-  <style>
-  /* Scroll Fade Animation */
-  .scroll-fade {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
-  }
-  .scroll-fade.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  </style>
-  
+</section>
 
 
-  <section id="contact" class="section">
-    <div class="container contact-container"  data-aos="zoom-in-up">
-  
-      <!-- Section Title -->
-      <div class="title-wrapper">
-
-        <h1 class="section-heading">Let’s Create Something Amazing</h1>
-      <div class="section-underline"></div>
-
-        <p class="contact-intro">
-          Have questions, project ideas, or collaboration opportunities? Feel free to reach out,
-          and I'll get back to you as soon as possible.
-        </p>
-      </div>
-  
-      <!-- Flex Wrapper -->
-      <div class="contact-box">
-  
-        <!-- Left: Info Panel -->
-        <div class="contact-info-box">
-          <h2>Mano Harsha Sappa</h2>
-          <p class="contact-line"><i class="fas fa-user"></i> Data Analytics Graduate Student</p>
-  <p class="contact-line"><i class="fas fa-map-marker-alt"></i> Fairfax, VA, USA</p>
-  <p class="contact-line"><i class="fas fa-envelope"></i> sappamanoharsha@gmail.com</p>
-  <p class="contact-line"><i class="fab fa-whatsapp"></i> +1 571-663-9406</p>
-  <p class="contact-line">Feel free to reach out for collaborations, opportunities, or just to say hi! I typically respond within 24 hours.</p>
-  <p class="contact-line availability">
-    <span class="green-dot"></span> Available for new projects
-  </p>
-  
-          <!-- Social Links -->
-          <div class="contact-icons">
-            <a href="https://www.linkedin.com/in/contactmanoharshasappa/" target="_blank">
-              <i class="devicon-linkedin-plain"></i>
-            </a>
-            <a href="https://github.com/ManoHarshaSappa" target="_blank">
-              <i class="devicon-github-original"></i>
-            </a>
-            <a href="https://www.youtube.com/@UsAlludu" target="_blank" >
-                <i class="fab fa-youtube"></i></a>
-            </a>
-            <a href="mailto:sappamanoharsha@gmail.com">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
-        </div>
-  
-        <!-- Right: Contact Form -->
-        <div class="contact-form-box">
-          <form name="submit-to-google-sheet" class="contact-form">
-            <h3>Get In Touch</h3>
-  
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="Name" placeholder="Your name" required>
-  
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="Email" placeholder="Your email address" required>
-  
-            <label for="message">Message:</label>
-            <textarea id="message" name="Message" rows="5" placeholder="Your message" required></textarea>
-  
-            <button type="submit">
-              Send Message <i  class="fas fa-paper-plane"></i>
-            </button>
-
-          </form>
-        </div>
-  
-      </div> <!-- /contact-box -->
-  
-    </div> <!-- /container -->
-  
-
-
-
-
-
-
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbzFOxT_49-WKwgQLDqJSDro6KLMmrOaTO7eSzQayJ9Xs5xtAKcFrB6F3btOoylsC8b12g/exec';
-      const form = document.forms['submit-to-google-sheet'];
-  
-      form.addEventListener('submit', e => {
-        e.preventDefault();
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-          .then(response => {
-            alert("Thank you! Your message has been sent.");
-            form.reset();
-          })
-          .catch(error => console.error('Error!', error.message));
-      });
-    </script>
-  </section>
 
   
   <!-- FOOTER SHOULD BE HERE -->
