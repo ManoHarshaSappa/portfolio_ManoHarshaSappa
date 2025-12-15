@@ -803,6 +803,67 @@ brands-title {
   box-shadow: 0 0 12px rgba(168,85,247,0.3);
 }
 
+
+
+
+/* Make preview area a positioning context */
+.project-preview {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+/* GitHub button container (top-right) */
+.project-lock {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 5;
+}
+
+/* The GitHub button */
+.project-lock a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+/* Icon size */
+.project-lock a i {
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* Hover effects */
+.project-lock a:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 0, 0, 0.72);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+/* Optional: show button only on hover of the card */
+.project-lock {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.project-card:hover .project-lock {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* FIXED IMAGE SIZE */
 
 .project-preview img {
