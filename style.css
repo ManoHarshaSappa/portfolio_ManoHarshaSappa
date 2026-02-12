@@ -1733,6 +1733,17 @@ brands-title {
    Featured certificate row
 ======================== */
 
+
+
+
+.featured-cert-wrapper .featured-card .featured-card-body .featured-text {
+  text-align: justify;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: rgb(209, 213, 219);
+  line-height: 1.7;
+}
+
 .featured-cert-wrapper {
   display: flex;
   flex-wrap: wrap;
