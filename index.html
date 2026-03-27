@@ -299,9 +299,9 @@
     </div>
 
     <div class="project-filters" aria-label="Project filters">
-      <button class="project-filter-btn" type="button" data-filter="predictive-ai">Predictive &amp; AI Systems</button>
-      <button class="project-filter-btn" type="button" data-filter="pipelines-platforms">Pipelines &amp; Platforms</button>
-      <button class="project-filter-btn" type="button" data-filter="analytics-bi">Analytics &amp; BI</button>
+      <button class="project-filter-btn is-active" type="button" data-filter="predictive-ai" aria-pressed="true">Predictive &amp; AI Systems</button>
+      <button class="project-filter-btn" type="button" data-filter="pipelines-platforms" aria-pressed="false">Pipelines &amp; Platforms</button>
+      <button class="project-filter-btn" type="button" data-filter="analytics-bi" aria-pressed="false">Analytics &amp; BI</button>
     </div>
 
     <div class="projects-library">
@@ -425,7 +425,7 @@
         </div>
       </div>
 
-      <div class="project-group" data-filter-group="pipelines-platforms">
+      <div class="project-group is-collapsed is-hidden" data-filter-group="pipelines-platforms">
         <div class="project-group-header">
           <p class="project-group-kicker">Pipelines &amp; Platforms</p>
           <h3 class="project-group-title">Pipelines, orchestration, and platform delivery</h3>
@@ -517,7 +517,7 @@
         </div>
       </div>
 
-      <div class="project-group" data-filter-group="analytics-bi">
+      <div class="project-group is-collapsed is-hidden" data-filter-group="analytics-bi">
         <div class="project-group-header">
           <p class="project-group-kicker">Analytics &amp; BI</p>
           <h3 class="project-group-title">Dashboards, decision support, and visual storytelling</h3>
@@ -622,6 +622,7 @@
     function setFilter(filter) {
       buttons.forEach((button) => {
         button.classList.toggle("is-active", button.dataset.filter === filter);
+        button.setAttribute("aria-pressed", String(button.dataset.filter === filter));
       });
 
       groups.forEach((group) => {
@@ -644,7 +645,7 @@
       button.addEventListener("click", () => setFilter(button.dataset.filter));
     });
 
-    setFilter("all");
+    setFilter("predictive-ai");
   })();
 </script>
 
