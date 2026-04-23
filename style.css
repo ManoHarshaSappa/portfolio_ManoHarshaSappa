@@ -1286,11 +1286,10 @@ section p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  flex: 0 1 118px;
   gap: 8px;
   padding: 18px 27px 0;
-  height: 121px;
-  box-sizing: border-box;
+  min-height: 121px;
   background: radial-gradient(circle at top, #111827 0, #020617 70%);
   border: 1px solid rgba(
     var(--brand-r, 148),
