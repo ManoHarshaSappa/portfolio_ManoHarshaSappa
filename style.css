@@ -2434,11 +2434,11 @@ section p {
 .featured-cert-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 0px;
   justify-content: space-between;
   align-items: center;
-  margin-top: 24px;
-  margin-bottom: 28px;
+  margin-top: 2px;
+  margin-bottom: 0px;
 }
 
 .featured-card {
