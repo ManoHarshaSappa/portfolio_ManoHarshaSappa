@@ -1331,14 +1331,14 @@ section p {
   width: 36px;
   height: 36px;
   object-fit: contain;
-  transition: transform 0.25s ease, filter 0.25s ease;
-  filter: brightness(0) invert(0.82);
+  transition: transform 0.28s ease, filter 0.28s ease;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
 }
 
 .skill-icon-item:hover .skill-icon-wrap img {
-  transform: scale(1.14);
-  filter: brightness(0) invert(1)
-    drop-shadow(0 0 8px rgba(var(--brand-r, 168), var(--brand-g, 85), var(--brand-b, 247), 0.7));
+  transform: scale(1.16);
+  filter: brightness(1.15)
+    drop-shadow(0 0 10px rgba(var(--brand-r, 168), var(--brand-g, 85), var(--brand-b, 247), 0.65));
 }
 
 .skill-icon-item span {
