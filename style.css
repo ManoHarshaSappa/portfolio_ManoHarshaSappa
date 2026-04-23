@@ -1327,18 +1327,26 @@ section p {
   background: rgba(var(--brand-r, 255), var(--brand-g, 255), var(--brand-b, 255), 0.13);
 }
 
-.skill-icon-wrap img {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-  transition: transform 0.28s ease, filter 0.28s ease;
-  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+.si-icon {
+  display: block;
+  width: 38px;
+  height: 38px;
+  background-color: var(--c, rgba(255, 255, 255, 0.85));
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  transition: transform 0.28s ease, background-color 0.28s ease,
+              filter 0.28s ease;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.3));
 }
 
-.skill-icon-item:hover .skill-icon-wrap img {
-  transform: scale(1.16);
-  filter: brightness(1.15)
-    drop-shadow(0 0 10px rgba(var(--brand-r, 168), var(--brand-g, 85), var(--brand-b, 247), 0.65));
+.skill-icon-item:hover .si-icon {
+  transform: scale(1.18);
+  background-color: color-mix(in srgb, var(--c, white) 85%, white 15%);
+  filter: drop-shadow(0 0 8px var(--c, rgba(168, 85, 247, 0.7)));
 }
 
 .skill-icon-item span {
