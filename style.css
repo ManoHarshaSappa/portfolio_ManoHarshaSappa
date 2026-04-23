@@ -1275,9 +1275,8 @@ section p {
 
 /* === SKILLS ICON GRID === */
 .skills-icon-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
   gap: 14px;
   margin-top: 40px;
 }
@@ -1286,10 +1285,8 @@ section p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 0 1 192px;
   gap: 12px;
   padding: 24px 16px 20px;
-  min-height: 232px;
   background: radial-gradient(circle at top, #111827 0, #020617 70%);
   border: 1px solid rgba(
     var(--brand-r, 148),
@@ -1322,7 +1319,7 @@ section p {
   align-items: center;
   justify-content: center;
   border-radius: 14px;
-  background: rgba(var(--brand-r, 255), var(--brand-g, 255), var(--brand-b, 255), 0.07);
+  background: rgba(var(--brand-r, 255), var(--brand-g, 255), var(--brand-b, 255), 0.11);
   transition: background 0.25s ease;
 }
 
@@ -1332,9 +1329,9 @@ section p {
 
 .si-icon {
   display: block;
-  width: 38px;
-  height: 38px;
-  background-color: var(--c, rgba(255, 255, 255, 0.85));
+  width: 40px;
+  height: 40px;
+  background-color: color-mix(in srgb, var(--c, white) 78%, white 22%);
   mask-size: contain;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -1343,7 +1340,7 @@ section p {
   -webkit-mask-position: center;
   transition: transform 0.28s ease, background-color 0.28s ease,
               filter 0.28s ease;
-  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.3));
+  filter: brightness(1.18) saturate(1.15) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
 }
 
 .skill-icon-item:hover .si-icon {
@@ -1433,11 +1430,8 @@ section p {
   }
 
   .skills-icon-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 12px;
-  }
-
-  .skill-icon-item {
-    flex-basis: 170px;
   }
 
   .expertise-strip {
@@ -1456,12 +1450,11 @@ section p {
   }
 
   .skills-icon-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 10px;
   }
 
   .skill-icon-item {
-    flex-basis: calc(50% - 10px);
-    min-height: 188px;
     padding: 16px 10px 14px;
   }
 
