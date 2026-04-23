@@ -27,9 +27,17 @@
     flex-direction: column;
   }
   
-  /* Optional: subtle grain texture on top */
+  /* Noise/grain texture overlay across entire site */
   body::before {
-    content: none;            /* sit behind all content */
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-size: 161px;
+    background-repeat: repeat;
+    background-image: url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png');
+    opacity: 0.04;
   }
   
   
