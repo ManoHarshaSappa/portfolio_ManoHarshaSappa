@@ -223,75 +223,56 @@
 <section id="projects" class="section">
   <div class="section-inner">
     <div class="projects-hero">
-      <p class="projects-kicker">Featured Experience</p>
-      <h1 class="section-heading">Featured Data Engineering &amp; Analytics Work</h1>
+      <p class="projects-kicker">Live Projects</p>
+      <h1 class="section-heading">Featured Projects — Live &amp; Deployed</h1>
       <p class="project-intro-subtext">
-        Real-world systems built across healthcare and financial domains
+        Full-stack AI and data engineering apps deployed and running in production
       </p>
     </div>
 
     <div class="featured-experience-shell">
-      <div class="featured-work-grid featured-work-grid-three">
+      <div class="featured-work-grid">
         <article class="featured-work-card">
           <div class="featured-work-image">
-            <img src="images/Healthcare Data Platform cigna.png" alt="Healthcare Data Platform" />
+            <img src="images/careIQ.png" alt="CareIQ" />
           </div>
           <div class="featured-work-body">
             <div class="featured-work-meta">
-              <span class="featured-work-org">Cigna</span>
-              <span class="featured-work-metric">35% improvement</span>
+              <span class="featured-work-org">AI + Data Engineering</span>
+              <a href="https://care-iq-seven.vercel.app/" target="_blank" rel="noopener noreferrer" class="featured-live-badge">&#9654; Live Demo</a>
             </div>
-            <h3 class="featured-work-title">Healthcare Data Platform</h3>
+            <h3 class="featured-work-title">CareIQ — AI-Powered Healthcare Platform</h3>
             <p class="featured-work-description">
-              Built scalable ELT pipelines using Snowflake, dbt, and AWS S3 to process healthcare claims data, improving availability and reducing manual preparation.
+              Replaces paper patient intake with an AI voice agent (Aria) that collects symptoms and history before the doctor arrives. Built an end-to-end HL7 data pipeline — Lambda → S3 → Glue → Snowflake → dbt — and a Next.js dashboard for real-time clinic analytics.
             </p>
             <div class="project-tags">
+              <span class="project-tag">Next.js</span>
               <span class="project-tag">Snowflake</span>
               <span class="project-tag">dbt</span>
-              <span class="project-tag">AWS S3</span>
-              <span class="project-tag">ELT</span>
+              <span class="project-tag">AWS</span>
+              <span class="project-tag">Gemini AI</span>
             </div>
           </div>
         </article>
 
         <article class="featured-work-card">
           <div class="featured-work-image">
-            <img src="images/Analytics Engineering Platform accenture .png" alt="Analytics Engineering Platform" />
+            <img src="images/lingobridge.png" alt="LingoBridge" />
           </div>
           <div class="featured-work-body">
             <div class="featured-work-meta">
-              <span class="featured-work-org">Accenture</span>
-              <span class="featured-work-metric">40% faster reporting</span>
+              <span class="featured-work-org">Full-Stack + AI</span>
+              <a href="https://lingo-bridge-nine.vercel.app/" target="_blank" rel="noopener noreferrer" class="featured-live-badge">&#9654; Live Demo</a>
             </div>
-            <h3 class="featured-work-title">Analytics Engineering Platform</h3>
+            <h3 class="featured-work-title">LingoBridge — Real-Time Multilingual Chat</h3>
             <p class="featured-work-description">
-              Developed scalable SQL pipelines, dimensional models, and BI dashboards improving reporting efficiency and reducing manual effort.
+              Type in your language, others read in theirs — instantly. Built a real-time chat system with Socket.IO and GPT-4o mini that auto-translates every message for each recipient across 8 languages, no sign-up required.
             </p>
             <div class="project-tags">
-              <span class="project-tag">SQL</span>
-              <span class="project-tag">Dimensional Modeling</span>
-              <span class="project-tag">Power BI</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="featured-work-card">
-          <div class="featured-work-image">
-            <img src="images/Data Pipeline & BI Systems.png" alt="Data Pipeline & BI Systems" />
-          </div>
-          <div class="featured-work-body">
-            <div class="featured-work-meta">
-              <span class="featured-work-org">Wipro</span>
-              <span class="featured-work-metric">25% accuracy improvement</span>
-            </div>
-            <h3 class="featured-work-title">Data Pipeline &amp; BI Systems</h3>
-            <p class="featured-work-description">
-              Designed SQL-based reporting pipelines and dashboards improving accuracy and enabling data-driven decisions.
-            </p>
-            <div class="project-tags">
-              <span class="project-tag">SQL</span>
-              <span class="project-tag">Power BI</span>
-              <span class="project-tag">Pipelines</span>
+              <span class="project-tag">Next.js</span>
+              <span class="project-tag">Socket.IO</span>
+              <span class="project-tag">GPT-4o mini</span>
+              <span class="project-tag">Node.js</span>
             </div>
           </div>
         </article>
@@ -301,7 +282,6 @@
     <div class="project-filters" aria-label="Project filters">
       <button class="project-filter-btn is-active" type="button" data-filter="predictive-ai" aria-pressed="true">Predictive &amp; AI Systems</button>
       <button class="project-filter-btn" type="button" data-filter="pipelines-platforms" aria-pressed="false">Pipelines &amp; Platforms</button>
-      <button class="project-filter-btn" type="button" data-filter="analytics-bi" aria-pressed="false">Analytics &amp; BI</button>
     </div>
 
     <div class="projects-library">
@@ -517,97 +497,6 @@
         </div>
       </div>
 
-      <div class="project-group is-collapsed is-hidden" data-filter-group="analytics-bi">
-        <div class="project-group-header">
-          <p class="project-group-kicker">Analytics &amp; BI</p>
-          <h3 class="project-group-title">Dashboards, decision support, and visual storytelling</h3>
-        </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/NYC_management.png" alt="NYC Recycling Efficiency Analysis" />
-              <div class="project-lock">
-                <a href="https://github.com/ManoHarshaSappa/NYC-Recycling-Efficiency-Analysis" target="_blank" rel="noopener noreferrer" title="View GitHub Repository">
-                  <i class="devicon-github-original"></i>
-                </a>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">NYC Recycling Efficiency Analysis</h3>
-              <p class="project-description">Created analytics and visualizations using Python, R, and SQL to evaluate city-wide recycling performance.</p>
-              <div class="project-tags">
-                <span class="project-tag">Python</span>
-                <span class="project-tag">R</span>
-                <span class="project-tag">SQL</span>
-                <span class="project-tag">Visualization</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/4 Project.png" alt="Transforming Misleading Graphs" />
-              <div class="project-lock">
-                <a href="https://github.com/ManoHarshaSappa/Redesigning-Graphs-for-Enhanced-Clarity-and-Insight" target="_blank" rel="noopener noreferrer" title="View GitHub Repository">
-                  <i class="devicon-github-original"></i>
-                </a>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Transforming Misleading Graphs into Insightful Visuals</h3>
-              <p class="project-description">Redesigned misleading charts into clearer decision-support visuals that reduce bias and improve analytical interpretation.</p>
-              <div class="project-tags">
-                <span class="project-tag">Data Visualization</span>
-                <span class="project-tag">Storytelling</span>
-                <span class="project-tag">Design Clarity</span>
-                <span class="project-tag">Insight Delivery</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/3 Project.png" alt="Traffic Collision Analysis" />
-              <div class="project-lock">
-                <a href="https://github.com/ManoHarshaSappa/Traffic-Collision-Analysis-in-Montgomery-County" target="_blank" rel="noopener noreferrer" title="View GitHub Repository">
-                  <i class="devicon-github-original"></i>
-                </a>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Traffic Collision Analysis</h3>
-              <p class="project-description">Analyzed collision patterns to identify high-risk zones and the factors most associated with road safety outcomes.</p>
-              <div class="project-tags">
-                <span class="project-tag">Analytics</span>
-                <span class="project-tag">Risk Analysis</span>
-                <span class="project-tag">Geospatial Insights</span>
-                <span class="project-tag">Python</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <img src="images/6 Project.png" alt="Optimizing Recycling Efficiency in NYC" />
-              <div class="project-lock">
-                <a href="https://github.com/ManoHarshaSappa/NYC-Recycling-Efficiency-Analysis" target="_blank" rel="noopener noreferrer" title="View GitHub Repository">
-                  <i class="devicon-github-original"></i>
-                </a>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Optimizing Recycling Efficiency in NYC</h3>
-              <p class="project-description">Assessed district-level waste data to surface recycling patterns and support sustainable resource management decisions.</p>
-              <div class="project-tags">
-                <span class="project-tag">BI Analysis</span>
-                <span class="project-tag">City Data</span>
-                <span class="project-tag">Sustainability</span>
-                <span class="project-tag">Insights</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -701,6 +590,10 @@
       <div class="skill-icon-item" style="--brand-r:62;--brand-g:207;--brand-b:142">
         <div class="skill-icon-wrap"><div class="si-icon" style="--c:#3ECF8E;mask-image:url('https://cdn.jsdelivr.net/npm/simple-icons@9/icons/supabase.svg');-webkit-mask-image:url('https://cdn.jsdelivr.net/npm/simple-icons@9/icons/supabase.svg')" aria-label="Supabase"></div></div>
         <span>Supabase</span>
+      </div>
+      <div class="skill-icon-item" style="--brand-r:0;--brand-g:229;--brand-b:153">
+        <div class="skill-icon-wrap"><div class="si-icon" style="--c:#00E599;mask-image:url('https://cdn.jsdelivr.net/npm/simple-icons@9/icons/neon.svg');-webkit-mask-image:url('https://cdn.jsdelivr.net/npm/simple-icons@9/icons/neon.svg')" aria-label="Neon"></div></div>
+        <span>Neon</span>
       </div>
       <div class="skill-icon-item" style="--brand-r:41;--brand-g:181;--brand-b:232">
         <div class="skill-icon-wrap"><div class="si-icon" style="--c:#29B5E8;mask-image:url('https://cdn.jsdelivr.net/npm/simple-icons@9/icons/snowflake.svg');-webkit-mask-image:url('https://cdn.jsdelivr.net/npm/simple-icons@9/icons/snowflake.svg')" aria-label="Snowflake"></div></div>
@@ -1427,7 +1320,8 @@
           Share a brief context about your idea, project, or question.
         </p>
 
-        <form name="submit-to-google-sheet" class="contact-form">
+        <form id="contact-form" class="contact-form">
+          <input type="hidden" name="access_key" value="e4658fad-4ac8-4700-b73a-2aab2f6f709a">
           <div class="form-row">
             <div class="form-field">
               <label for="name">Name</label>
@@ -1470,20 +1364,43 @@
 
   </div><!-- /.container -->
 
-  <!-- Google Sheet submit script -->
   <script>
-    const scriptURL =
-      'https://script.google.com/macros/s/AKfycbzFOxT_49-WKwgQLDqJSDro6KLMmrOaTO7eSzQayJ9Xs5xtAKcFrB6F3btOoylsC8b12g/exec';
-    const form = document.forms['submit-to-google-sheet'];
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
 
-    form.addEventListener('submit', e => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-          alert("Thank you! Your message has been sent.");
-          form.reset();
-        })
-        .catch(error => console.error('Error!', error.message));
+
+      const formData = new FormData(contactForm);
+      const originalHTML = submitBtn.innerHTML;
+
+      submitBtn.innerHTML = 'Sending… <i class="fas fa-spinner fa-spin"></i>';
+      submitBtn.disabled = true;
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await response.json();
+
+        if (response.ok) {
+          submitBtn.innerHTML = 'Sent! <i class="fas fa-check"></i>';
+          contactForm.reset();
+          setTimeout(() => {
+            submitBtn.innerHTML = originalHTML;
+            submitBtn.disabled = false;
+          }, 3000);
+        } else {
+          alert('Error: ' + data.message);
+          submitBtn.innerHTML = originalHTML;
+          submitBtn.disabled = false;
+        }
+      } catch (error) {
+        alert('Something went wrong. Please try again.');
+        submitBtn.innerHTML = originalHTML;
+        submitBtn.disabled = false;
+      }
     });
   </script>
 </section>
