@@ -4325,7 +4325,9 @@ section p {
 
   /* Let's Collaborate card */
   .mob-collab-card {
-    background: #111827;
+    background: linear-gradient(#111827, #111827) padding-box,
+                linear-gradient(135deg, #a855f7, #6366f1, #ec4899) border-box;
+    border: 1px solid transparent;
     border-radius: 44px 0px 0px 0px;
     padding: 12px 27px;
     position: relative;
