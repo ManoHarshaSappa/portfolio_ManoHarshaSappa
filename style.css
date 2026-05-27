@@ -3369,3 +3369,748 @@ section p {
   font-weight: 500;
   color: #f1f5f9;
 }
+
+
+
+
+/* ================================================================
+   MOBILE-ONLY REDESIGN  (max-width: 768px)
+   Inspired by Seera floating pill nav + clean card layouts
+   Desktop layout is completely untouched.
+================================================================ */
+
+/* --- Mobile Bottom Nav: hidden on desktop --- */
+.mobile-bottom-nav { display: none; }
+
+@media (max-width: 768px) {
+
+  /* ---- 1. TOPBAR: invisible on mobile (kept for JS scroll-offset calculation) ---- */
+  .topbar {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    height: 80px !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* ---- HOME: hide text content, keep only profile card + brands ---- */
+  .about-left .headline,
+  .about-left .domain-label,
+  .about-left .description,
+  .about-left .about-stats,
+  .about-left .lets-talk-btn {
+    display: none !important;
+  }
+
+  /* about-left only shows brands scroll now, tighten spacing */
+  .about-left {
+    gap: 0;
+  }
+
+  .experience-brands {
+    padding-top: 8px;
+  }
+
+  /* Hide desktop footer on mobile — top pill nav replaces navigation */
+  .site-footer {
+    display: none !important;
+  }
+
+  /* Body: reset old footer padding-bottom */
+  body {
+    padding-bottom: 20px !important;
+  }
+
+  /* ---- 2. MOBILE FLOATING PILL NAV — positioned at TOP like Seera ---- */
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    top: 12px;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background: rgba(10, 12, 26, 0.90);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 999px;
+    padding: 8px 12px;
+    gap: 4px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255,255,255,0.04);
+    width: calc(100% - 32px);
+    max-width: 380px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Icon-only nav items — flex: 1 so all 7 always fit */
+  .mobile-nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+    height: 40px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: rgba(200, 210, 230, 0.60) !important;
+    font-weight: 400 !important;
+    transition: color 0.18s ease, background 0.18s ease, transform 0.15s ease;
+  }
+
+  /* Hide text labels — icon only */
+  .mobile-nav-item span {
+    display: none;
+  }
+
+  .mobile-nav-item i {
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  /* Active item: solid purple filled square */
+  .mobile-nav-item.active {
+    background: #a855f7 !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 14px rgba(168, 85, 247, 0.4);
+  }
+
+  .mobile-nav-item:active {
+    transform: scale(0.88);
+  }
+
+  /* ---- FEATURED PROJECT CARD FIXES ---- */
+
+  /* Meta row: plain text label + compact live button on one line */
+  .featured-work-meta {
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: nowrap;
+  }
+
+  /* "AI + Data Engineering" → plain muted text, no pill */
+  .featured-work-org {
+    background: transparent !important;
+    padding: 0 !important;
+    min-height: unset !important;
+    border-radius: 0 !important;
+    color: #64748b !important;
+    font-size: 0.68rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  /* "LIVE DEMO" → smaller, cleaner button */
+  .featured-live-badge {
+    padding: 5px 11px !important;
+    font-size: 0.65rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    box-shadow: 0 0 10px rgba(34,197,94,0.35) !important;
+    gap: 5px !important;
+    white-space: nowrap;
+  }
+
+  .live-dot {
+    width: 5px !important;
+    height: 5px !important;
+  }
+
+  /* Featured card title — smaller */
+  .featured-work-title {
+    font-size: 0.95rem !important;
+    margin-bottom: 6px;
+  }
+
+  /* Featured card description — clamp to 3 lines + read more via JS */
+  .featured-work-description {
+    font-size: 0.8rem !important;
+    line-height: 1.55 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  .featured-work-description.mob-expanded {
+    display: block !important;
+    -webkit-line-clamp: unset !important;
+    overflow: visible !important;
+  }
+
+  .mob-read-more {
+    background: none;
+    border: none;
+    color: #a855f7;
+    font-size: 0.76rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 0 0;
+    display: block;
+    font-family: inherit;
+  }
+
+  /* Regular project card text — slightly smaller */
+  .project-title {
+    font-size: 0.92rem !important;
+  }
+
+  .project-description {
+    font-size: 0.78rem !important;
+  }
+
+  /* ---- 3. ABOUT / HERO SECTION ---- */
+  #about {
+    padding-top: 16px !important;
+    padding-bottom: 20px;
+    min-height: unset;
+    align-items: flex-start;
+  }
+
+  .about-flex-container {
+    flex-direction: column;
+    padding: 0 16px;
+    gap: 18px;
+    align-items: center;
+    padding-top: 8px;
+  }
+
+  .about-right {
+    order: -1;
+    justify-content: center;
+    max-width: 100%;
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .about-left {
+    max-width: 100%;
+    flex-basis: 100%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .profile-card {
+    max-width: 260px;
+    padding: 16px 16px 14px;
+  }
+
+  .profile-photo img {
+    border-radius: 14px;
+  }
+
+  .headline-primary {
+    font-size: 1.55rem;
+    font-weight: 800;
+  }
+
+  .headline-secondary {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .description {
+    font-size: 0.83rem;
+    text-align: center;
+  }
+
+  .domain-label {
+    font-size: 0.7rem;
+  }
+
+  /* ---- 4. STATS: single horizontal row ---- */
+  .about-stats {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    margin-top: 18px;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 1.75rem !important;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    max-width: 72px;
+    text-align: center;
+    line-height: 1.4;
+    margin-top: 3px;
+  }
+
+  /* ---- 5. HERO BUTTONS ---- */
+  .lets-talk-btn {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero-btn {
+    font-size: 0.82rem;
+    padding: 7px 14px;
+  }
+
+  /* ---- 6. BRANDS SCROLL: compact single row ---- */
+  .experience-brands {
+    padding: 14px 0 0;
+  }
+
+  .brands-title {
+    font-size: 0.78rem;
+    text-align: center;
+  }
+
+  .brands-slider {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .brands-track {
+    gap: 28px;
+    animation-duration: 18s;
+  }
+
+  .brands-track img {
+    height: 26px !important;
+    max-width: 90px !important;
+  }
+
+  .brand-logo-wipro {
+    height: 32px !important;
+    max-width: 75px !important;
+  }
+
+  .brand-logo-gmu {
+    height: 30px !important;
+    max-width: 110px !important;
+  }
+
+  .brand-logo-cigna {
+    height: 26px !important;
+  }
+
+  /* ---- 7. PROJECTS SECTION ---- */
+  #projects {
+    padding: 36px 16px 32px !important;
+  }
+
+  .projects-hero {
+    margin-bottom: 24px;
+  }
+
+  #projects .section-heading {
+    font-size: 1.4rem;
+  }
+
+  .featured-experience-shell {
+    padding: 14px;
+  }
+
+  .featured-work-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+  }
+
+  .featured-work-image img {
+    height: 150px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+  }
+
+  .projects-library {
+    margin-top: 32px;
+  }
+
+  /* Hide filter tabs + section headers — show all projects together */
+  .project-filters {
+    display: none !important;
+  }
+
+  .projects-library-header,
+  .project-group-header {
+    display: none !important;
+  }
+
+  .project-group + .project-group {
+    margin-top: 10px !important;
+  }
+
+  .projects-library {
+    margin-top: 20px !important;
+  }
+
+  /* Additional projects — 2 per row, small cards */
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .project-preview img {
+    height: 100px !important;
+  }
+
+  .project-content {
+    padding: 10px !important;
+  }
+
+  .project-title {
+    font-size: 0.78rem !important;
+    margin-bottom: 4px;
+  }
+
+  .project-description {
+    font-size: 0.7rem !important;
+    -webkit-line-clamp: 2;
+  }
+
+  .project-tag {
+    font-size: 0.58rem !important;
+    padding: 2px 6px !important;
+  }
+
+  /* ---- 8. SKILLS SECTION ---- */
+  #skills {
+    padding: 36px 16px 32px !important;
+  }
+
+  #skills .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .skills-icon-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 8px !important;
+    margin-top: 24px;
+  }
+
+  .skill-icon-item {
+    padding: 10px 4px 6px !important;
+    min-height: 80px !important;
+    border-radius: 12px;
+    gap: 5px;
+  }
+
+  .skill-icon-wrap {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px;
+  }
+
+  .si-icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .skill-icon-item span {
+    font-size: 0.52rem !important;
+    min-height: unset !important;
+    letter-spacing: 0.02em;
+  }
+
+  .expertise-strip {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .expertise-card {
+    padding: 14px 14px;
+  }
+
+  /* ---- 9. EXPERIENCE SECTION ---- */
+  #experience {
+    padding: 36px 16px 32px;
+  }
+
+  /* Experience timeline — single horizontal row on mobile */
+  .career-timeline {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    padding: 0 4px;
+    margin-bottom: 24px;
+    overflow-x: visible;
+  }
+
+  .career-timeline-arrow {
+    display: flex !important;
+    flex-shrink: 0;
+  }
+
+  .career-timeline-item {
+    flex: 1;
+    width: auto !important;
+    padding: 10px 8px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+    align-items: center !important;
+  }
+
+  .career-logo-shell {
+    width: 52px !important;
+    height: 52px !important;
+    padding: 8px !important;
+    margin: 0 auto 8px auto !important;
+    border-radius: 14px !important;
+  }
+
+  .career-timeline-logo {
+    max-height: 30px !important;
+  }
+
+  .career-timeline-company {
+    font-size: 0.68rem !important;
+    letter-spacing: 0.06em;
+  }
+
+  .career-timeline-duration {
+    font-size: 0.6rem !important;
+  }
+
+  /* Hide long summary text to keep timeline compact */
+  .career-timeline-summary {
+    display: none !important;
+  }
+
+  .career-timeline-copy {
+    max-width: none;
+  }
+
+  .career-total-badge {
+    font-size: 0.55rem !important;
+    padding: 1px 5px !important;
+  }
+
+  .experience-entry {
+    padding: 16px;
+  }
+
+  .experience-header-top {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .experience-logo {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: contain;
+  }
+
+  /* ---- 10. CERTIFICATES SECTION ---- */
+  #certificates {
+    padding: 36px 16px 32px !important;
+  }
+
+  .featured-cert-wrapper {
+    flex-direction: column !important;
+    gap: 16px;
+  }
+
+  .cert-image {
+    min-width: unset !important;
+    max-width: 160px;
+    margin: 0 auto;
+  }
+
+  /* ---- 11. CONTACT SECTION: hide profile card, keep only form ---- */
+  #contact {
+    padding: 36px 16px 32px !important;
+  }
+
+  .contact-profile {
+    display: none !important;
+  }
+
+  .contact-form-card {
+    flex: 1 1 100% !important;
+  }
+
+  .contact-grid {
+    gap: 0;
+  }
+
+  .contact-card {
+    flex: 1 1 100%;
+    padding: 20px 18px;
+  }
+
+  .contact-form-title {
+    font-size: 1.2rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .contact-submit {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  /* ---- 12. PUBLICATIONS SECTION ---- */
+  #publications {
+    padding: 36px 16px 32px;
+  }
+
+  .pub-layout {
+    flex-direction: column !important;
+  }
+
+  /* ---- 13. GENERAL SECTION PADDING ---- */
+  .section-heading {
+    font-size: 1.5rem !important;
+  }
+
+  .section-underline {
+    margin: 8px auto 14px;
+  }
+
+  .container {
+    padding: 0 4px;
+  }
+
+  /* ---- 14. CERTIFICATION CAROUSEL ---- */
+  .cert-carousel-wrapper {
+    padding-bottom: 56px;
+  }
+
+  .cert-card {
+    min-width: 200px !important;
+  }
+
+} /* end @media (max-width: 768px) */
+
+
+/* ================================================================
+   COMPANY BADGE LOGOS  (Amazon • PepsiCo)
+   Used in career timeline, experience entries, and brand scroll
+================================================================ */
+
+/* Generic badge shell — replaces img logo for non-image companies */
+.co-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-weight: 900;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* Amazon — orange gradient */
+.co-amazon {
+  background: linear-gradient(135deg, #FF9900 0%, #FF6600 100%);
+  color: #fff;
+}
+.co-amazon i {
+  font-size: 1.3em;
+}
+
+/* PepsiCo — blue gradient */
+.co-pepsico {
+  background: linear-gradient(135deg, #0066CC 0%, #004B93 100%);
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+/* Career timeline logo sizing */
+.career-timeline-logo.co-badge {
+  width: 52px;
+  height: 52px;
+  font-size: 1.35rem;
+  border-radius: 14px;
+}
+
+/* Experience entry logo sizing */
+.experience-logo.co-badge {
+  width: 44px;
+  height: 44px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+}
+
+/* ================================================================
+   BRAND WORDMARKS for brands-track scroll
+================================================================ */
+
+.brand-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 42px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.brand-amazon {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #FF9900;
+  letter-spacing: -0.01em;
+}
+.brand-amazon i {
+  font-size: 1.7rem;
+  line-height: 1;
+}
+.brand-amazon span {
+  font-size: 1.1rem;
+  font-family: 'Arial', sans-serif;
+  font-weight: 800;
+  text-transform: lowercase;
+}
+
+.brand-pepsico {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0066CC;
+  letter-spacing: -0.01em;
+}
+.brand-pepsico span {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+/* Real logo image sizing in brand scroll */
+.brand-logo-amazon {
+  height: 36px;
+  max-width: 140px;
+  object-fit: contain;
+  filter: brightness(1.05);
+}
+
+.brand-logo-pepsico {
+  height: 40px;
+  max-width: 130px;
+  object-fit: contain;
+}
