@@ -4326,10 +4326,8 @@ section p {
 
   /* Let's Collaborate card */
   .mob-collab-card {
-    margin: 0 0 40px;
-    background: #111827;
     border-radius: 20px;
-    padding: 28px 24px;
+    padding: 12px 27px;
     position: relative;
     overflow: hidden;
   }
