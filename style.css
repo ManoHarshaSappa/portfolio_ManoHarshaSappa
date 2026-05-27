@@ -3600,7 +3600,7 @@ section p {
 
   /* ---- 3. ABOUT / HERO SECTION ---- */
   #about {
-    padding-top: 16px !important;
+    padding-top: 100px !important;
     padding-bottom: 20px;
     min-height: unset;
     align-items: flex-start;
