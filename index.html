@@ -1767,6 +1767,72 @@
   })();
 </script>
 
+<!-- Floating CTA (mobile only) -->
+<div id="mob-cta" class="mob-cta" aria-label="Quick contact">
+  <a href="https://www.linkedin.com/in/manoharshasappa/" target="_blank" class="mob-cta-btn mob-cta-linkedin">
+    <i class="fab fa-linkedin-in"></i>
+    <span>LinkedIn</span>
+  </a>
+  <a href="mailto:harshasappamano@gmail.com" class="mob-cta-btn mob-cta-mail">
+    <i class="fas fa-envelope"></i>
+    <span>Mail</span>
+  </a>
+</div>
+
+<!-- 6. Mobile projects: show 2, expand 4 at a time -->
+<script>
+  (function () {
+    if (window.innerWidth > 768) return;
+    function initProjectLimit() {
+      var allCards = Array.from(document.querySelectorAll('.project-card'));
+      if (!allCards.length) return;
+      var shown = 2;
+      allCards.forEach(function (c, i) { c.style.display = i < shown ? '' : 'none'; });
+
+      var existing = document.getElementById('mob-proj-more');
+      if (existing) existing.remove();
+
+      var btn = document.createElement('button');
+      btn.id = 'mob-proj-more';
+      btn.className = 'mob-proj-more-btn';
+      btn.textContent = 'Show More Projects';
+      var library = document.querySelector('.projects-library');
+      if (library) library.appendChild(btn);
+
+      function updateBtn() {
+        var remaining = allCards.length - shown;
+        if (remaining <= 0) { btn.style.display = 'none'; return; }
+        btn.textContent = 'Show More (' + remaining + ' left)';
+        btn.style.display = '';
+      }
+      updateBtn();
+
+      btn.addEventListener('click', function () {
+        shown = Math.min(shown + 4, allCards.length);
+        allCards.forEach(function (c, i) { c.style.display = i < shown ? '' : 'none'; });
+        updateBtn();
+      });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initProjectLimit);
+    else initProjectLimit();
+  })();
+</script>
+
+<!-- 7. Floating LinkedIn + Mail CTA — appears when scroll stops -->
+<script>
+  (function () {
+    if (window.innerWidth > 768) return;
+    var cta = document.getElementById('mob-cta');
+    if (!cta) return;
+    var timer;
+    window.addEventListener('scroll', function () {
+      cta.classList.remove('mob-cta-visible');
+      clearTimeout(timer);
+      timer = setTimeout(function () { cta.classList.add('mob-cta-visible'); }, 900);
+    }, { passive: true });
+    setTimeout(function () { cta.classList.add('mob-cta-visible'); }, 1500);
+  })();
+</script>
 
 </body>
 </html>

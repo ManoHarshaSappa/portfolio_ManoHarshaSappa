@@ -4215,8 +4215,89 @@ section p {
     font-size: 0.65rem !important;
   }
 
+  /* ---- Section dividers ---- */
+  section.section + section.section {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    padding-top: 100px;
+  }
+
 } /* end @media (max-width: 768px) */
 
+/* ================================================================
+   FLOATING CTA  (mobile only — LinkedIn + Mail)
+================================================================ */
+.mob-cta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mob-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    right: 16px;
+    bottom: 32px;
+    z-index: 9998;
+    opacity: 0;
+    transform: translateX(24px);
+    pointer-events: none;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+
+  .mob-cta.mob-cta-visible {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+  }
+
+  .mob-cta-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    color: #fff;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+  }
+
+  .mob-cta-linkedin {
+    background: #a855f7;
+    box-shadow: 0 4px 18px rgba(168,85,247,0.45);
+  }
+
+  .mob-cta-mail {
+    background: #a855f7;
+    box-shadow: 0 4px 18px rgba(168,85,247,0.45);
+  }
+
+  /* Show More Projects button */
+  .mob-proj-more-btn {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px 0;
+    background: transparent;
+    border: 1px solid rgba(168,85,247,0.5);
+    border-radius: 12px;
+    color: #a855f7;
+    font-size: 0.82rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: background 0.2s;
+  }
+
+  .mob-proj-more-btn:active {
+    background: rgba(168,85,247,0.12);
+  }
+}
 
 /* ================================================================
    COMPANY BADGE LOGOS  (Amazon • PepsiCo)
