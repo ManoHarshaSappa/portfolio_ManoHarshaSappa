@@ -4248,12 +4248,12 @@ section p {
   }
 
   /* ---- Section dividers ---- */
-  section.section + section.section {
+  section + section {
     padding-top: 20px;
     position: relative;
   }
 
-  section.section + section.section::before {
+  section + section::before {
     content: '';
     display: block;
     position: absolute;
