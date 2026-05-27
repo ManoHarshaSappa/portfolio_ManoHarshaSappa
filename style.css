@@ -3744,7 +3744,7 @@ section p {
 
   /* ---- 7. PROJECTS SECTION ---- */
   #projects {
-    padding: 36px 16px 32px !important;
+    padding: 100px 16px 32px !important;
   }
 
   .projects-hero {
@@ -3824,7 +3824,7 @@ section p {
 
   /* ---- 8. SKILLS SECTION ---- */
   #skills {
-    padding: 36px 16px 32px !important;
+    padding: 100px 16px 32px !important;
   }
 
   #skills .section-heading {
@@ -3873,7 +3873,7 @@ section p {
 
   /* ---- 9. EXPERIENCE SECTION ---- */
   #experience {
-    padding: 36px 16px 32px;
+    padding: 100px 16px 32px;
   }
 
   /* Experience timeline — single horizontal row on mobile */
@@ -4002,7 +4002,7 @@ section p {
 
   /* ---- 10. CERTIFICATES SECTION ---- */
   #certificates {
-    padding: 36px 16px 32px !important;
+    padding: 100px 16px 32px !important;
   }
 
   .featured-cert-wrapper {
@@ -4061,7 +4061,7 @@ section p {
 
   /* ---- 11. CONTACT SECTION: hide profile card, keep only form ---- */
   #contact {
-    padding: 36px 16px 32px !important;
+    padding: 100px 16px 32px !important;
   }
 
   .contact-profile {
@@ -4102,7 +4102,7 @@ section p {
 
   /* ---- 12. PUBLICATIONS SECTION ---- */
   #publications {
-    padding: 60px 16px 32px;
+    padding: 100px 16px 32px;
   }
 
   .pub-layout {
