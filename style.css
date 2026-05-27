@@ -560,7 +560,6 @@ section p {
 }
 
 .profile-subtitle {
-  margin-top: 8px;
   font-size: 0.78rem;
   line-height: 1.5;
   color: #94a3b8;
@@ -3633,6 +3632,8 @@ section p {
   .profile-card {
     max-width: 260px;
     padding: 16px 16px 14px;
+    border: none !important;
+    box-shadow: none !important;
   }
 
   .profile-photo img {

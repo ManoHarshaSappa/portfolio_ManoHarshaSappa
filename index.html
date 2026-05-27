@@ -1681,57 +1681,68 @@
   })();
 </script>
 
-<!-- 4. Swipe / scroll-to-navigate between sections on mobile -->
+<!-- 4. Mobile continuous scroll: all sections stacked, nav scrolls to them -->
 <script>
   (function () {
     if (window.innerWidth > 768) return;
-    var sections = ['about','projects','skills','experience','certificates','publications','contact'];
-    var current = (location.hash || '#about').slice(1);
-    var busy = false;
 
-    // Keep current in sync when nav links are clicked
-    document.addEventListener('click', function (e) {
-      var a = e.target.closest('.mobile-nav-item');
-      if (a) {
-        var h = a.getAttribute('href');
-        if (h && h.startsWith('#')) { current = h.slice(1); busy = false; }
-      }
+    var sectionIds = ['about','projects','skills','experience','certificates','publications','contact'];
+
+    // Force all sections visible and block the tab-switcher from hiding them
+    function revealAll() {
+      sectionIds.forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) { el.style.setProperty('display','block','important'); el.style.opacity = '1'; }
+      });
+    }
+    revealAll();
+    document.addEventListener('DOMContentLoaded', revealAll);
+
+    // MutationObserver: if JS sets display:none on a section, instantly undo it
+    var mo = new MutationObserver(function (mutations) {
+      mutations.forEach(function (m) {
+        if (m.type === 'attributes' && m.attributeName === 'style') {
+          var el = m.target;
+          if (sectionIds.indexOf(el.id) !== -1 && el.style.display === 'none') {
+            el.style.setProperty('display','block','important');
+          }
+        }
+      });
+    });
+    sectionIds.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) mo.observe(el, { attributes: true, attributeFilter: ['style'] });
     });
 
-    function go(dir) {
-      if (busy) return;
-      var idx = sections.indexOf(current);
-      var next = idx + dir;
-      if (next < 0 || next >= sections.length) return;
-      busy = true;
-      setTimeout(function () { busy = false; }, 900);
-      var link = document.querySelector('a[href="#' + sections[next] + '"]');
-      if (link) link.click();
-    }
+    // Nav clicks: scroll to section instead of tab-switching
+    document.querySelectorAll('.mobile-nav-item').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        var id = (link.getAttribute('href') || '').replace('#','');
+        var target = document.getElementById(id);
+        if (!target) return;
+        var top = target.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }, true); // capture phase — runs before desktop nav handler
+    });
 
-    // Touch swipe detection
-    var ty0 = 0, tx0 = 0, ts = 0;
-    document.addEventListener('touchstart', function (e) {
-      ty0 = e.touches[0].clientY;
-      tx0 = e.touches[0].clientX;
-      ts  = Date.now();
-    }, { passive: true });
+    // IntersectionObserver: highlight correct nav icon as you scroll
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.id;
+          document.querySelectorAll('.mobile-nav-item').forEach(function (item) {
+            item.classList.toggle('active', item.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
 
-    document.addEventListener('touchend', function (e) {
-      var dy = ty0 - e.changedTouches[0].clientY;
-      var dx = Math.abs(tx0 - e.changedTouches[0].clientX);
-      var dt = Date.now() - ts;
-      // Quick, predominantly vertical swipe
-      if (dt > 450 || Math.abs(dy) < 55 || dx > Math.abs(dy) * 0.7) return;
-
-      var maxSY = document.documentElement.scrollHeight - window.innerHeight;
-      var atBottom = window.scrollY >= maxSY - 60;
-      var atTop    = window.scrollY <= 60;
-      var shortPage = maxSY < 80; // section fits in viewport
-
-      if (dy > 0 && (atBottom || shortPage)) go(1);   // swipe up  → next
-      if (dy < 0 && atTop)                   go(-1);  // swipe down → prev
-    }, { passive: true });
+    sectionIds.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) io.observe(el);
+    });
   })();
 </script>
 
