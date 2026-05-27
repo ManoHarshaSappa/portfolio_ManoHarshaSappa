@@ -3783,7 +3783,22 @@ section p {
     display: none !important;
   }
 
-  .projects-library-header,
+  /* Show Additional Projects header on mobile */
+  .projects-library-header {
+    display: block !important;
+    margin-bottom: 12px;
+  }
+
+  .projects-library-title {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .projects-library-subtitle {
+    display: none !important;
+  }
+
   .project-group-header {
     display: none !important;
   }
@@ -4217,8 +4232,19 @@ section p {
 
   /* ---- Section dividers ---- */
   section.section + section.section {
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
     padding-top: 100px;
+    position: relative;
+  }
+
+  section.section + section.section::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(168,85,247,0.7) 30%, rgba(255,255,255,0.4) 50%, rgba(168,85,247,0.7) 70%, transparent);
   }
 
 } /* end @media (max-width: 768px) */
@@ -4268,12 +4294,73 @@ section p {
 
   .mob-cta-linkedin {
     background: #a855f7;
+    color: #fff;
     box-shadow: 0 4px 18px rgba(168,85,247,0.45);
   }
 
   .mob-cta-mail {
+    background: #ffffff;
+    color: #0f172a;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+  }
+
+  /* Let's Collaborate card */
+  .mob-collab-card {
+    margin: 0 0 40px;
+    background: #111827;
+    border-radius: 20px;
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mob-collab-card h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0 0 4px;
+  }
+
+  .mob-collab-card h2 span {
+    color: #a855f7;
+    display: block;
+  }
+
+  .mob-collab-card p {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 14px 0 0;
+    max-width: 80%;
+  }
+
+  .mob-collab-arrow {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
     background: #a855f7;
-    box-shadow: 0 4px 18px rgba(168,85,247,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 4px 18px rgba(168,85,247,0.5);
+  }
+
+  /* GitHub link in projects header */
+  .mob-github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.7rem;
+    color: #a855f7;
+    text-decoration: none;
+    margin-top: 2px;
   }
 
   /* Show More Projects button */
