@@ -3350,7 +3350,7 @@ section p {
     border-top: 1px solid rgba(255,255,255,0.1);
   }
   
-  body { padding-bottom: 120px; }
+  body { padding-bottom: 0px; }
   
 
 .site-footer p {
