@@ -3995,10 +3995,51 @@ section p {
     gap: 16px;
   }
 
+  /* Certifications: hide text block, show only badge image then carousel */
+  .featured-card-body {
+    display: none !important;
+  }
+
+  .featured-cert-wrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0 !important;
+  }
+
   .cert-image {
     min-width: unset !important;
-    max-width: 160px;
-    margin: 0 auto;
+    max-width: 200px;
+    margin: 0 auto 12px;
+  }
+
+  .section-subtext {
+    font-size: 0.65rem !important;
+    text-align: center;
+    margin: 6px 0 8px !important;
+  }
+
+  /* Experience LinkedIn button — compact */
+  .linkedin-btn-container {
+    text-align: center;
+    margin-top: 12px !important;
+  }
+
+  .linkedin-btn-container .pill-btn {
+    font-size: 0.72rem !important;
+    padding: 8px 16px !important;
+  }
+
+  /* Publications: show award images, small */
+  .award-images {
+    display: flex !important;
+    gap: 8px !important;
+    margin-top: 12px !important;
+  }
+
+  .award-image {
+    width: calc(50% - 4px) !important;
+    height: auto !important;
+    border-radius: 8px !important;
   }
 
   /* ---- 11. CONTACT SECTION: hide profile card, keep only form ---- */
@@ -4115,10 +4156,6 @@ section p {
     display: -webkit-box !important;
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
-  }
-
-  .award-images {
-    display: none !important;
   }
 
   .award-title {
