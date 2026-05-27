@@ -546,7 +546,6 @@ section p {
 }
 
 .profile-info {
-  margin-top: 16px;
 }
 
 .profile-name {
@@ -574,8 +573,7 @@ section p {
 }
 
 .profile-social {
-  margin: 22px 0 12px;
-  padding-bottom: 20px;
+  margin: 7px 0 0;
   display: flex;
   gap: 12px;
   justify-content: center;   /* horizontally center icons */
@@ -1710,7 +1708,6 @@ section p {
 /* Cards – 5 per row on desktop */
 .cert-card {
   flex: 0 0 calc((100% - (var(--gap) * 4)) / 5);
-  box-sizing: border-box;
   background: #0f172a;
   border-radius: 14px;
   text-decoration: none;
@@ -2614,7 +2611,6 @@ section p {
 /* Cards – 5 per row on desktop */
 .cert-card {
   flex: 0 0 calc((100% - (var(--gap) * 4)) / 5);
-  box-sizing: border-box;
   background: #0f172a;
   border-radius: 14px;
   text-decoration: none;
