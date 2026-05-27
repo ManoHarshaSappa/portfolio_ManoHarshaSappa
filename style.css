@@ -3384,6 +3384,19 @@ section p {
 
 @media (max-width: 768px) {
 
+  /* ---- 0. KILL HORIZONTAL OVERFLOW — prevents brands animation from making page wider ---- */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  .experience-brands,
+  .brands-slider,
+  .cert-carousel-wrapper,
+  .certification-scroll {
+    max-width: 100vw !important;
+  }
+
   /* ---- 1. TOPBAR: invisible on mobile (kept for JS scroll-offset calculation) ---- */
   .topbar {
     opacity: 0 !important;
@@ -3432,16 +3445,19 @@ section p {
     padding-bottom: 20px !important;
   }
 
-  /* ---- 2. MOBILE FLOATING PILL NAV — positioned at TOP like Seera ---- */
+  /* ---- 2. MOBILE FLOATING PILL NAV — always on top, never moves ---- */
   .mobile-bottom-nav {
     display: flex;
     position: fixed;
     top: 12px;
     bottom: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9999;
-    background: rgba(10, 12, 26, 0.90);
+    left: 16px;
+    right: 16px;
+    transform: none;
+    width: auto;
+    max-width: none;
+    z-index: 99999;
+    background: rgba(10, 12, 26, 0.92);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.10);
@@ -3449,8 +3465,6 @@ section p {
     padding: 8px 12px;
     gap: 4px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255,255,255,0.04);
-    width: calc(100% - 32px);
-    max-width: 380px;
     justify-content: space-between;
     align-items: center;
   }
