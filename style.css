@@ -3421,9 +3421,23 @@ section p {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
-    gap: 24px !important;
+    gap: 20px !important;
     margin-top: 0 !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 0 !important;
+    padding: 10px 0 0 !important;
+  }
+
+  /* Remove gap between profile card and stats/brands */
+  .about-flex-container {
+    gap: 6px !important;
+  }
+
+  .about-left {
+    gap: 0 !important;
+  }
+
+  .experience-brands {
+    padding-top: 4px !important;
   }
 
   /* about-left only shows brands scroll now, tighten spacing */
@@ -3599,7 +3613,7 @@ section p {
   .about-flex-container {
     flex-direction: column;
     padding: 0 16px;
-    gap: 18px;
+    gap: 6px;
     align-items: center;
     padding-top: 8px;
   }
@@ -3693,7 +3707,7 @@ section p {
 
   /* ---- 6. BRANDS SCROLL: compact single row ---- */
   .experience-brands {
-    padding: 14px 0 0;
+    padding: 4px 0 0;
   }
 
   .brands-title {
@@ -3712,10 +3726,10 @@ section p {
   }
 
   .brands-track img {
-    height: 28px !important;
-    max-width: 100px !important;
+    height: 42px !important;
+    max-width: 130px !important;
     filter: brightness(0) invert(1) !important;
-    opacity: 0.85;
+    opacity: 0.90;
   }
 
   .brand-logo-wipro {
