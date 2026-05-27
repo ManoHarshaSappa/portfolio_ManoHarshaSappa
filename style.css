@@ -4097,8 +4097,9 @@ section p {
     padding: 20px 18px;
   }
 
-  .contact-form-title {
-    font-size: 1.2rem;
+  .contact-form-title,
+  .contact-form-subtitle {
+    display: none !important;
   }
 
   .form-row {
