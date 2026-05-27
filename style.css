@@ -3896,7 +3896,7 @@ section p {
     flex-direction: row !important;
     align-items: stretch !important;
     justify-content: center !important;
-    gap: 12px !important;
+    gap: 0 !important;
     padding: 0;
     margin-bottom: 24px;
     overflow-x: visible;
@@ -3949,9 +3949,7 @@ section p {
   }
 
   .career-timeline-company {
-    font-size: 0.72rem !important;
-    letter-spacing: 0.06em;
-    font-weight: 700 !important;
+    display: none !important;
   }
 
   .career-timeline-duration {
