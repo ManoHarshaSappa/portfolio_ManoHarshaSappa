@@ -3451,7 +3451,6 @@ section p {
 
   /* Body: reset old footer padding-bottom */
   body {
-    padding-bottom: 20px !important;
   }
 
   /* ---- 2. MOBILE FLOATING PILL NAV — always on top, never moves ---- */
@@ -4326,7 +4325,8 @@ section p {
 
   /* Let's Collaborate card */
   .mob-collab-card {
-    border-radius: 20px;
+    background: #111827;
+    border-radius: 44px 0px 0px 0px;
     padding: 12px 27px;
     position: relative;
     overflow: hidden;
