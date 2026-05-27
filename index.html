@@ -1681,6 +1681,27 @@
   })();
 </script>
 
+<!-- 4. Cert carousel auto-scroll on mobile -->
+<script>
+  (function () {
+    if (window.innerWidth > 768) return;
+    var track = document.getElementById('cert-track');
+    if (!track) return;
+    var timer = setInterval(function () {
+      var maxScroll = track.scrollWidth - track.clientWidth;
+      if (track.scrollLeft >= maxScroll - 4) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        var card = track.querySelector('.cert-card');
+        var gap = 10;
+        var step = card ? (card.offsetWidth + gap) * 2 : track.clientWidth;
+        track.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    }, 3000);
+    track.addEventListener('touchstart', function () { clearInterval(timer); }, { once: true });
+  })();
+</script>
+
 
 </body>
 </html>

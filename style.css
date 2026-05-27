@@ -3388,20 +3388,29 @@ section p {
   .topbar {
     opacity: 0 !important;
     pointer-events: none !important;
-    height: 80px !important;
+    height: 100px !important;
     padding: 0 !important;
     border: none !important;
     background: transparent !important;
     box-shadow: none !important;
   }
 
-  /* ---- HOME: hide text content, keep only profile card + brands ---- */
+  /* ---- HOME: hide text content, keep only profile card + stats + brands ---- */
   .about-left .headline,
   .about-left .domain-label,
   .about-left .description,
-  .about-left .about-stats,
   .about-left .lets-talk-btn {
     display: none !important;
+  }
+
+  /* Show stats row below profile card */
+  .about-left .about-stats {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 24px !important;
+    margin-top: 0 !important;
+    margin-bottom: 4px !important;
   }
 
   /* about-left only shows brands scroll now, tighten spacing */
@@ -3689,8 +3698,10 @@ section p {
   }
 
   .brands-track img {
-    height: 26px !important;
-    max-width: 90px !important;
+    height: 28px !important;
+    max-width: 100px !important;
+    filter: brightness(0) invert(1) !important;
+    opacity: 0.85;
   }
 
   .brand-logo-wipro {
@@ -3780,13 +3791,11 @@ section p {
   }
 
   .project-description {
-    font-size: 0.7rem !important;
-    -webkit-line-clamp: 2;
+    display: none !important;
   }
 
-  .project-tag {
-    font-size: 0.58rem !important;
-    padding: 2px 6px !important;
+  .project-tags {
+    display: none !important;
   }
 
   /* ---- 8. SKILLS SECTION ---- */
@@ -3906,18 +3915,50 @@ section p {
   }
 
   .experience-entry {
-    padding: 16px;
+    padding: 12px;
   }
 
   .experience-header-top {
     flex-direction: row;
-    gap: 10px;
+    gap: 8px;
   }
 
   .experience-logo {
-    width: 40px !important;
-    height: 40px !important;
+    width: 34px !important;
+    height: 34px !important;
     object-fit: contain;
+  }
+
+  .experience-role {
+    font-size: 0.8rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .exp-company {
+    font-size: 0.68rem !important;
+  }
+
+  .exp-duration {
+    font-size: 0.65rem !important;
+  }
+
+  .experience-story {
+    font-size: 0.72rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .read-more-btn {
+    font-size: 0.68rem !important;
+    padding: 5px 10px !important;
+  }
+
+  .skills.icon-skills {
+    display: none !important;
+  }
+
+  /* Collapse story to ~3 lines on mobile */
+  .experience-story-wrap.collapsed {
+    max-height: 4.8em !important;
   }
 
   /* ---- 10. CERTIFICATES SECTION ---- */
@@ -3999,13 +4040,69 @@ section p {
     padding: 0 4px;
   }
 
-  /* ---- 14. CERTIFICATION CAROUSEL ---- */
+  /* ---- 14. CERTIFICATION CAROUSEL — 2 per view, auto-scroll ---- */
   .cert-carousel-wrapper {
-    padding-bottom: 56px;
+    padding-bottom: 52px;
+  }
+
+  .certification-scroll {
+    gap: 10px !important;
+    scroll-snap-type: x mandatory !important;
   }
 
   .cert-card {
-    min-width: 200px !important;
+    flex: 0 0 calc(50% - 5px) !important;
+    min-width: unset !important;
+    padding: 10px 8px 10px !important;
+    scroll-snap-align: start;
+  }
+
+  .cert-card img {
+    height: 80px !important;
+    object-fit: cover !important;
+  }
+
+  .cert-card h3 {
+    font-size: 0.62rem !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    margin-bottom: 4px !important;
+  }
+
+  .cert-card p {
+    font-size: 0.55rem !important;
+  }
+
+  /* ---- 15. PUBLICATIONS ---- */
+  .pub-title {
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .pub-conference {
+    font-size: 0.65rem !important;
+  }
+
+  .pub-description {
+    font-size: 0.72rem !important;
+    -webkit-line-clamp: 3 !important;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  .award-images {
+    display: none !important;
+  }
+
+  .award-title {
+    font-size: 0.85rem !important;
+  }
+
+  .award-meta {
+    font-size: 0.65rem !important;
   }
 
 } /* end @media (max-width: 768px) */
