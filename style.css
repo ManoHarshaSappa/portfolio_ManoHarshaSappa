@@ -3980,6 +3980,21 @@ section p {
     display: none !important;
   }
 
+  /* Social icons — flat, no circles */
+  .profile-social a {
+    width: auto !important;
+    height: auto !important;
+    border: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    font-size: 1.35rem !important;
+    color: rgba(255,255,255,0.75) !important;
+  }
+
+  .profile-social {
+    gap: 20px !important;
+  }
+
   /* Collapse story to ~3 lines on mobile */
   .experience-story-wrap.collapsed {
     max-height: 4.8em !important;
