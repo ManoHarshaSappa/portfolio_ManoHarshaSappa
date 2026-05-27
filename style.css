@@ -4010,8 +4010,8 @@ section p {
     gap: 16px;
   }
 
-  /* Certifications: hide text block, show only badge image then carousel */
-  .featured-card-body {
+  /* Certifications: hide entire featured text card, show badges + carousel only */
+  .featured-card {
     display: none !important;
   }
 
@@ -4023,14 +4023,16 @@ section p {
 
   .cert-image {
     min-width: unset !important;
-    max-width: 200px;
-    margin: 0 auto 12px;
+    max-width: 220px;
+    margin: 0 auto 10px;
   }
 
   .section-subtext {
-    font-size: 0.65rem !important;
+    font-size: 0.68rem !important;
     text-align: center;
-    margin: 6px 0 8px !important;
+    margin: 4px 0 10px !important;
+    color: #94a3b8 !important;
+    line-height: 1.5;
   }
 
   /* Experience LinkedIn button — compact */
@@ -4100,11 +4102,42 @@ section p {
 
   /* ---- 12. PUBLICATIONS SECTION ---- */
   #publications {
-    padding: 36px 16px 32px;
+    padding: 60px 16px 32px;
   }
 
   .pub-layout {
     flex-direction: column !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .pub-main,
+  .pub-side {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .pub-description,
+  .pub-conference,
+  .pub-title,
+  .award-meta,
+  .award-title {
+    text-align: left !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+
+  .pub-tags {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .pub-tag {
+    font-size: 0.65rem !important;
+    padding: 4px 8px !important;
   }
 
   /* ---- 13. GENERAL SECTION PADDING ---- */
